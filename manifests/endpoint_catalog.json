@@ -1,0 +1,2582 @@
+{
+  "twse": {
+    "opendata_t187ap46_L_21": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-職業安全衛生",
+      "path": "/opendata/t187ap46_L_21",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-職業安全衛生(臺灣證券交易所)"
+    },
+    "opendata_t187ap45_L": {
+      "name": "上市公司股利分派情形",
+      "path": "/opendata/t187ap45_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司股利分派情形"
+    },
+    "opendata_t187ap46_L_20": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-反競爭行為法律訴訟",
+      "path": "/opendata/t187ap46_L_20",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-反競爭行為法律訴訟，本項目為產業永續指標，公司依產業別加強揭露，故非所有公司揭露相關資訊"
+    },
+    "opendata_t187ap46_L_19": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-風險管理政策",
+      "path": "/opendata/t187ap46_L_19",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-風險管理政策，本項目為產業永續指標，公司依產業別加強揭露，故非所有公司揭露相關資訊"
+    },
+    "opendata_t187ap46_L_18": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-持股及控制力",
+      "path": "/opendata/t187ap46_L_18",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-持股及控制力，本項目為產業永續指標，公司依產業別加強揭露，故非所有公司揭露相關資訊"
+    },
+    "opendata_t187ap46_L_17": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-普惠金融",
+      "path": "/opendata/t187ap46_L_17",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-普惠金融，本項目為產業永續指標，公司依產業別加強揭露，故非所有公司揭露相關資訊"
+    },
+    "opendata_t187ap46_L_16": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-資訊安全",
+      "path": "/opendata/t187ap46_L_16",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-資訊安全，本項目為產業永續指標，公司依產業別加強揭露，故非所有公司揭露相關資訊"
+    },
+    "opendata_t187ap46_L_15": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-社區關係",
+      "path": "/opendata/t187ap46_L_15",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-社區關係，本項目為產業永續指標，公司依產業別加強揭露，故非所有公司揭露相關資訊"
+    },
+    "opendata_t187ap46_L_14": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-產品品質與安全",
+      "path": "/opendata/t187ap46_L_14",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-產品品質與安全，本項目為產業永續指標，公司依產業別加強揭露，故非所有公司揭露相關資訊"
+    },
+    "opendata_t187ap46_L_13": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-供應鏈管理",
+      "path": "/opendata/t187ap46_L_13",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-供應鏈管理，本項目為產業永續指標，公司依產業別加強揭露，故非所有公司揭露相關資訊"
+    },
+    "opendata_t187ap46_L_12": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-食品安全",
+      "path": "/opendata/t187ap46_L_12",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-食品安全，本項目為產業永續指標，公司依產業別加強揭露，故非所有公司揭露相關資訊"
+    },
+    "opendata_t187ap46_L_11": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-產品生命週期",
+      "path": "/opendata/t187ap46_L_11",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-產品生命週期，本項目為產業永續指標，公司依產業別加強揭露，故非所有公司揭露相關資訊"
+    },
+    "opendata_t187ap46_L_10": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-燃料管理",
+      "path": "/opendata/t187ap46_L_10",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-燃料管理，本項目為產業永續指標，公司依產業別加強揭露，故非所有公司揭露相關資訊"
+    },
+    "opendata_t187ap46_L_9": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-功能性委員會",
+      "path": "/opendata/t187ap46_L_9",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-功能性委員會"
+    },
+    "opendata_t187ap46_L_8": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-氣候相關議題管理",
+      "path": "/opendata/t187ap46_L_8",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-氣候相關議題管理"
+    },
+    "opendata_t187ap47_L": {
+      "name": "基金基本資料彙總表",
+      "path": "/opendata/t187ap47_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "基金基本資料彙總表"
+    },
+    "opendata_t187ap05_P": {
+      "name": "公開發行公司每月營業收入彙總表",
+      "path": "/opendata/t187ap05_P",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公開發行公司每月營業收入彙總表"
+    },
+    "opendata_t187ap46_L_7": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-投資人溝通",
+      "path": "/opendata/t187ap46_L_7",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-投資人溝通"
+    },
+    "opendata_t187ap46_L_6": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-董事會",
+      "path": "/opendata/t187ap46_L_6",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-董事會"
+    },
+    "opendata_t187ap46_L_5": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-人力發展",
+      "path": "/opendata/t187ap46_L_5",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-人力發展"
+    },
+    "opendata_t187ap46_L_4": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-廢棄物管理",
+      "path": "/opendata/t187ap46_L_4",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-廢棄物管理"
+    },
+    "opendata_t187ap46_L_3": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-水資源管理",
+      "path": "/opendata/t187ap46_L_3",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-水資源管理"
+    },
+    "opendata_t187ap46_L_2": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-能源管理",
+      "path": "/opendata/t187ap46_L_2",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-能源管理"
+    },
+    "opendata_t187ap46_L_1": {
+      "name": "上市公司企業ESG資訊揭露彙總資料-溫室氣體排放",
+      "path": "/opendata/t187ap46_L_1",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司企業ESG資訊揭露彙總資料-溫室氣體排放"
+    },
+    "ETFReport_ETFRank": {
+      "name": "定期定額交易戶數統計排行月報表",
+      "path": "/ETFReport/ETFRank",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "定期定額交易戶數統計排行月報表"
+    },
+    "brokerService_secRegData": {
+      "name": "開辦定期定額業務證券商名單",
+      "path": "/brokerService/secRegData",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "開辦定期定額業務證券商名單"
+    },
+    "opendata_t187ap07_X_ci": {
+      "name": "公發公司資產負債表-一般業",
+      "path": "/opendata/t187ap07_X_ci",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司資產負債表-一般業"
+    },
+    "opendata_t187ap07_X_mim": {
+      "name": "公發公司資產負債表-異業",
+      "path": "/opendata/t187ap07_X_mim",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司資產負債表-異業"
+    },
+    "opendata_t187ap06_X_basi": {
+      "name": "公發公司綜合損益表-金融業",
+      "path": "/opendata/t187ap06_X_basi",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司綜合損益表-金融業"
+    },
+    "opendata_t187ap06_X_bd": {
+      "name": "公發公司綜合損益表-證券期貨業",
+      "path": "/opendata/t187ap06_X_bd",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司綜合損益表-證券期貨業"
+    },
+    "opendata_t187ap06_X_ci": {
+      "name": "公發公司綜合損益表-一般業",
+      "path": "/opendata/t187ap06_X_ci",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司綜合損益表-一般業"
+    },
+    "opendata_t187ap06_X_fh": {
+      "name": "公發公司綜合損益表-金控業",
+      "path": "/opendata/t187ap06_X_fh",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司綜合損益表-金控業"
+    },
+    "opendata_t187ap06_X_ins": {
+      "name": "公發公司綜合損益表-保險業",
+      "path": "/opendata/t187ap06_X_ins",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司綜合損益表-保險業"
+    },
+    "opendata_t187ap06_X_mim": {
+      "name": "公發公司綜合損益表-異業",
+      "path": "/opendata/t187ap06_X_mim",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司綜合損益表-異業"
+    },
+    "news_eventList": {
+      "name": "證交所活動訊息",
+      "path": "/news/eventList",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "證交所活動訊息"
+    },
+    "company_applylistingForeign": {
+      "name": "外國公司向證交所申請第一上市之公司",
+      "path": "/company/applylistingForeign",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "外國公司向證交所申請第一上市之公司"
+    },
+    "company_newlisting": {
+      "name": "最近上市公司",
+      "path": "/company/newlisting",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "最近上市公司"
+    },
+    "company_suspendListingCsvAndHtml": {
+      "name": "終止上市公司",
+      "path": "/company/suspendListingCsvAndHtml",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "終止上市公司"
+    },
+    "brokerService_brokerList": {
+      "name": "證券商總公司基本資料",
+      "path": "/brokerService/brokerList",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "證券商總公司基本資料"
+    },
+    "news_newsList": {
+      "name": "證交所新聞",
+      "path": "/news/newsList",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "證交所新聞"
+    },
+    "exchangeReport_BWIBBU_ALL": {
+      "name": "上市個股日本益比、殖利率及股價淨值比（依代碼查詢）",
+      "path": "/exchangeReport/BWIBBU_ALL",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市個股日本益比、殖利率及股價淨值比（依代碼查詢）"
+    },
+    "exchangeReport_STOCK_DAY_AVG_ALL": {
+      "name": "上市個股日收盤價及月平均價",
+      "path": "/exchangeReport/STOCK_DAY_AVG_ALL",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市個股日收盤價及月平均價"
+    },
+    "exchangeReport_STOCK_DAY_ALL": {
+      "name": "上市個股日成交資訊",
+      "path": "/exchangeReport/STOCK_DAY_ALL",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市個股日成交資訊"
+    },
+    "exchangeReport_FMSRFK_ALL": {
+      "name": "上市個股月成交資訊",
+      "path": "/exchangeReport/FMSRFK_ALL",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市個股月成交資訊"
+    },
+    "exchangeReport_FMNPTK_ALL": {
+      "name": "上市個股年成交資訊",
+      "path": "/exchangeReport/FMNPTK_ALL",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市個股年成交資訊"
+    },
+    "exchangeReport_MI_INDEX": {
+      "name": "每日收盤行情-大盤統計資訊",
+      "path": "/exchangeReport/MI_INDEX",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "每日收盤行情-大盤統計資訊"
+    },
+    "company_applylistingLocal": {
+      "name": "申請上市之本國公司",
+      "path": "/company/applylistingLocal",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "申請上市之本國公司"
+    },
+    "fund_MI_QFIIS_cat": {
+      "name": "集中市場外資及陸資投資類股持股比率表",
+      "path": "/fund/MI_QFIIS_cat",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場外資及陸資投資類股持股比率表"
+    },
+    "fund_MI_QFIIS_sort_20": {
+      "name": "集中市場外資及陸資持股前 20 名彙總表",
+      "path": "/fund/MI_QFIIS_sort_20",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場外資及陸資持股前 20 名彙總表"
+    },
+    "exchangeReport_BFI61U": {
+      "name": "中央登錄公債補息資料表",
+      "path": "/exchangeReport/BFI61U",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "中央登錄公債補息資料表"
+    },
+    "exchangeReport_TWT88U": {
+      "name": "上市個股首五日無漲跌幅",
+      "path": "/exchangeReport/TWT88U",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市個股首五日無漲跌幅"
+    },
+    "Announcement_BFZFZU_T": {
+      "name": "投資理財節目異常推介個股",
+      "path": "/Announcement/BFZFZU_T",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "投資理財節目異常推介個股"
+    },
+    "exchangeReport_TWTB4U": {
+      "name": "上市股票每日當日沖銷交易標的及統計",
+      "path": "/exchangeReport/TWTB4U",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市股票每日當日沖銷交易標的及統計"
+    },
+    "exchangeReport_TWTBAU1": {
+      "name": "集中市場暫停先賣後買當日沖銷交易標的預告表",
+      "path": "/exchangeReport/TWTBAU1",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場暫停先賣後買當日沖銷交易標的預告表"
+    },
+    "exchangeReport_TWTBAU2": {
+      "name": "集中市場暫停先賣後買當日沖銷交易歷史查詢",
+      "path": "/exchangeReport/TWTBAU2",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場暫停先賣後買當日沖銷交易歷史查詢"
+    },
+    "exchangeReport_MI_INDEX4": {
+      "name": "每日上市上櫃跨市場成交資訊",
+      "path": "/exchangeReport/MI_INDEX4",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "每日上市上櫃跨市場成交資訊"
+    },
+    "indicesReport_FRMSA": {
+      "name": "寶島股價指數歷史資料",
+      "path": "/indicesReport/FRMSA",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "寶島股價指數歷史資料"
+    },
+    "indicesReport_TAI50I": {
+      "name": "臺灣 50 指數歷史資料",
+      "path": "/indicesReport/TAI50I",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "臺灣 50 指數歷史資料"
+    },
+    "exchangeReport_MI_5MINS": {
+      "name": "每 5 秒委託成交統計",
+      "path": "/exchangeReport/MI_5MINS",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "每 5 秒委託成交統計"
+    },
+    "exchangeReport_FMTQIK": {
+      "name": "集中市場每日市場成交資訊",
+      "path": "/exchangeReport/FMTQIK",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場每日市場成交資訊"
+    },
+    "exchangeReport_MI_INDEX20": {
+      "name": "集中市場每日成交量前二十名證券",
+      "path": "/exchangeReport/MI_INDEX20",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場每日成交量前二十名證券"
+    },
+    "exchangeReport_TWT53U": {
+      "name": "集中市場盤後零股交易行情單",
+      "path": "/exchangeReport/TWT53U",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場盤後零股交易行情單"
+    },
+    "exchangeReport_TWTAWU": {
+      "name": "集中市場暫停交易證券",
+      "path": "/exchangeReport/TWTAWU",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場暫停交易證券"
+    },
+    "exchangeReport_BFT41U": {
+      "name": "集中市場盤後定價交易",
+      "path": "/exchangeReport/BFT41U",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場盤後定價交易"
+    },
+    "exchangeReport_BFI84U": {
+      "name": "集中市場停資停券預告表",
+      "path": "/exchangeReport/BFI84U",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場停資停券預告表"
+    },
+    "exchangeReport_MI_MARGN": {
+      "name": "集中市場融資融券餘額",
+      "path": "/exchangeReport/MI_MARGN",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場融資融券餘額"
+    },
+    "indicesReport_MI_5MINS_HIST": {
+      "name": "發行量加權股價指數歷史資料",
+      "path": "/indicesReport/MI_5MINS_HIST",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "發行量加權股價指數歷史資料"
+    },
+    "block_BFIAUU_d": {
+      "name": "集中市場鉅額交易日成交量值統計",
+      "path": "/block/BFIAUU_d",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場鉅額交易日成交量值統計"
+    },
+    "block_BFIAUU_m": {
+      "name": "集中市場鉅額交易月成交量值統計",
+      "path": "/block/BFIAUU_m",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場鉅額交易月成交量值統計"
+    },
+    "block_BFIAUU_y": {
+      "name": "集中市場鉅額交易年成交量值統計",
+      "path": "/block/BFIAUU_y",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場鉅額交易年成交量值統計"
+    },
+    "exchangeReport_STOCK_FIRST": {
+      "name": "每日第一上市外國股票成交量值",
+      "path": "/exchangeReport/STOCK_FIRST",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "每日第一上市外國股票成交量值"
+    },
+    "exchangeReport_TWT85U": {
+      "name": "集中市場證券變更交易",
+      "path": "/exchangeReport/TWT85U",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場證券變更交易"
+    },
+    "holidaySchedule_holidaySchedule": {
+      "name": "有價證券集中交易市場開（休）市日期",
+      "path": "/holidaySchedule/holidaySchedule",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "有價證券集中交易市場開（休）市日期"
+    },
+    "exchangeReport_BWIBBU_d": {
+      "name": "上市個股日本益比、殖利率及股價淨值比（依日期查詢）",
+      "path": "/exchangeReport/BWIBBU_d",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市個股日本益比、殖利率及股價淨值比（依日期查詢）"
+    },
+    "indicesReport_MFI94U": {
+      "name": "發行量加權股價報酬指數",
+      "path": "/indicesReport/MFI94U",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "發行量加權股價報酬指數"
+    },
+    "SBL_TWT96U": {
+      "name": "上市上櫃股票當日可借券賣出股數",
+      "path": "/SBL/TWT96U",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市上櫃股票當日可借券賣出股數"
+    },
+    "exchangeReport_TWT84U": {
+      "name": "上市個股股價升降幅度",
+      "path": "/exchangeReport/TWT84U",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市個股股價升降幅度"
+    },
+    "opendata_twtazu_od": {
+      "name": "集中市場漲跌證券數統計表",
+      "path": "/opendata/twtazu_od",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場漲跌證券數統計表"
+    },
+    "opendata_t187ap04_L": {
+      "name": "上市公司每日重大訊息",
+      "path": "/opendata/t187ap04_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司每日重大訊息"
+    },
+    "opendata_t187ap03_L": {
+      "name": "上市公司基本資料",
+      "path": "/opendata/t187ap03_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司基本資料"
+    },
+    "opendata_t187ap05_L": {
+      "name": "上市公司每月營業收入彙總表",
+      "path": "/opendata/t187ap05_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司每月營業收入彙總表"
+    },
+    "opendata_t187ap01": {
+      "name": "券商業務別人員數",
+      "path": "/opendata/t187ap01",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "券商業務別人員數"
+    },
+    "opendata_t187ap02_L": {
+      "name": "上市公司持股逾 10% 大股東名單",
+      "path": "/opendata/t187ap02_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司持股逾 10% 大股東名單"
+    },
+    "opendata_t187ap14_L": {
+      "name": "上市公司各產業EPS統計資訊",
+      "path": "/opendata/t187ap14_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司各產業EPS統計資訊"
+    },
+    "opendata_t187ap15_L": {
+      "name": "上市公司截至各季綜合損益財測達成情形(簡式)",
+      "path": "/opendata/t187ap15_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司截至各季綜合損益財測達成情形(簡式)"
+    },
+    "opendata_t187ap16_L": {
+      "name": "上市公司當季綜合損益經會計師查核(核閱)數與當季預測數差異達百分之十以上者，或截至當季累計差異達百分之二十以上者(簡式)",
+      "path": "/opendata/t187ap16_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司當季綜合損益經會計師查核(核閱)數與當季預測數差異達百分之十以上者，或截至當季累計差異達百分之二十以上者(簡式)"
+    },
+    "opendata_t187ap17_L": {
+      "name": "上市公司營益分析查詢彙總表(全體公司彙總報表)",
+      "path": "/opendata/t187ap17_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司營益分析查詢彙總表(全體公司彙總報表)"
+    },
+    "opendata_t187ap20": {
+      "name": "各券商每月月計表",
+      "path": "/opendata/t187ap20",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "各券商每月月計表"
+    },
+    "opendata_t187ap21": {
+      "name": "各券商收支概況表資料",
+      "path": "/opendata/t187ap21",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "各券商收支概況表資料"
+    },
+    "opendata_t187ap18": {
+      "name": "證券商基本資料",
+      "path": "/opendata/t187ap18",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "證券商基本資料"
+    },
+    "opendata_t187ap19": {
+      "name": "電子式交易統計資訊",
+      "path": "/opendata/t187ap19",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "電子式交易統計資訊"
+    },
+    "opendata_t187ap08_L": {
+      "name": "上市公司董事、監察人持股不足法定成數彙總表",
+      "path": "/opendata/t187ap08_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司董事、監察人持股不足法定成數彙總表"
+    },
+    "opendata_t187ap11_L": {
+      "name": "上市公司董監事持股餘額明細資料",
+      "path": "/opendata/t187ap11_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司董監事持股餘額明細資料"
+    },
+    "opendata_t187ap12_L": {
+      "name": "上市公司每日內部人持股轉讓事前申報表-持股轉讓日報表",
+      "path": "/opendata/t187ap12_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司每日內部人持股轉讓事前申報表-持股轉讓日報表"
+    },
+    "opendata_t187ap13_L": {
+      "name": "上市公司每日內部人持股轉讓事前申報表-持股未轉讓日報表",
+      "path": "/opendata/t187ap13_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司每日內部人持股轉讓事前申報表-持股未轉讓日報表"
+    },
+    "opendata_t187ap22_L": {
+      "name": "上市公司金管會證券期貨局裁罰案件專區",
+      "path": "/opendata/t187ap22_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司金管會證券期貨局裁罰案件專區"
+    },
+    "opendata_t187ap30_L": {
+      "name": "上市公司獨立董監事兼任情形彙總表",
+      "path": "/opendata/t187ap30_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司獨立董監事兼任情形彙總表"
+    },
+    "opendata_t187ap29_A_L": {
+      "name": "上市公司董事酬金相關資訊",
+      "path": "/opendata/t187ap29_A_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司董事酬金相關資訊"
+    },
+    "opendata_t187ap29_B_L": {
+      "name": "上市公司監察人酬金相關資訊",
+      "path": "/opendata/t187ap29_B_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司監察人酬金相關資訊"
+    },
+    "opendata_t187ap29_C_L": {
+      "name": "上市公司合併報表董事酬金相關資訊",
+      "path": "/opendata/t187ap29_C_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司合併報表董事酬金相關資訊"
+    },
+    "opendata_t187ap29_D_L": {
+      "name": "上市公司合併報表監察人酬金相關資訊",
+      "path": "/opendata/t187ap29_D_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司合併報表監察人酬金相關資訊"
+    },
+    "opendata_t187ap23_L": {
+      "name": "上市公司違反資訊申報、重大訊息及說明記者會規定專區",
+      "path": "/opendata/t187ap23_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司違反資訊申報、重大訊息及說明記者會規定專區"
+    },
+    "opendata_t187ap31_L": {
+      "name": "上市公司財務報告經監察人承認情形",
+      "path": "/opendata/t187ap31_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司財務報告經監察人承認情形"
+    },
+    "opendata_t187ap36_L": {
+      "name": "上市認購(售)權證年度發行量概況統計表",
+      "path": "/opendata/t187ap36_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市認購(售)權證年度發行量概況統計表"
+    },
+    "opendata_t187ap03_P": {
+      "name": "公開發行公司基本資料",
+      "path": "/opendata/t187ap03_P",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公開發行公司基本資料"
+    },
+    "opendata_t187ap43_L": {
+      "name": "上市認購(售)權證交易人數檔",
+      "path": "/opendata/t187ap43_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市認購(售)權證交易人數檔"
+    },
+    "opendata_t187ap42_L": {
+      "name": "上市認購(售)權證每日成交資料檔",
+      "path": "/opendata/t187ap42_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市認購(售)權證每日成交資料檔"
+    },
+    "announcement_punish": {
+      "name": "集中市場公布處置股票",
+      "path": "/announcement/punish",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場公布處置股票"
+    },
+    "opendata_t187ap10_L": {
+      "name": "上市公司董事、監察人持股不足法定成數連續達3個月以上彙總表",
+      "path": "/opendata/t187ap10_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司董事、監察人持股不足法定成數連續達3個月以上彙總表"
+    },
+    "opendata_t187ap38_L": {
+      "name": "上市公司股東會公告-召集股東常(臨時)會公告資料彙總表(95年度起適用)",
+      "path": "/opendata/t187ap38_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司股東會公告-召集股東常(臨時)會公告資料彙總表(95年度起適用)"
+    },
+    "opendata_t187ap24_L": {
+      "name": "上市公司經營權及營業範圍異(變)動專區-經營權異動公司",
+      "path": "/opendata/t187ap24_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司經營權及營業範圍異(變)動專區-經營權異動公司"
+    },
+    "opendata_t187ap37_L": {
+      "name": "上市權證基本資料彙總表",
+      "path": "/opendata/t187ap37_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市權證基本資料彙總表"
+    },
+    "opendata_t187ap26_L": {
+      "name": "上市公司經營權及營業範圍異(變)動專區-經營權異動且營業範圍重大變更停止買賣公司",
+      "path": "/opendata/t187ap26_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司經營權及營業範圍異(變)動專區-經營權異動且營業範圍重大變更停止買賣公司"
+    },
+    "opendata_t187ap41_L": {
+      "name": "上市公司召開股東常 (臨時) 會日期、地點及採用電子投票情形等資料彙總表",
+      "path": "/opendata/t187ap41_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司召開股東常 (臨時) 會日期、地點及採用電子投票情形等資料彙總表"
+    },
+    "announcement_notetrans": {
+      "name": "集中市場公布注意累計次數可能達處置標準資訊",
+      "path": "/announcement/notetrans",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場公布注意累計次數可能達處置標準資訊"
+    },
+    "announcement_notice": {
+      "name": "集中市場當日公布注意股票",
+      "path": "/announcement/notice",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "集中市場當日公布注意股票"
+    },
+    "opendata_t187ap25_L": {
+      "name": "上市公司經營權及營業範圍異(變)動專區-營業範圍重大變更公司",
+      "path": "/opendata/t187ap25_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司經營權及營業範圍異(變)動專區-營業範圍重大變更公司"
+    },
+    "opendata_t187ap27_L": {
+      "name": "上市公司經營權及營業範圍異(變)動專區-經營權異動且營業範圍重大變更列為變更交易公司",
+      "path": "/opendata/t187ap27_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司經營權及營業範圍異(變)動專區-經營權異動且營業範圍重大變更列為變更交易公司"
+    },
+    "opendata_t187ap32_L": {
+      "name": "上市公司公司治理之相關規程規則",
+      "path": "/opendata/t187ap32_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司公司治理之相關規程規則"
+    },
+    "opendata_t187ap33_L": {
+      "name": "上市公司董事長是否兼任總經理",
+      "path": "/opendata/t187ap33_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司董事長是否兼任總經理"
+    },
+    "opendata_t187ap09_L": {
+      "name": "上市公司董事、監察人質權設定占董事及監察人實際持有股數彙總表",
+      "path": "/opendata/t187ap09_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司董事、監察人質權設定占董事及監察人實際持有股數彙總表"
+    },
+    "opendata_OpenData_BRK01": {
+      "name": "證券商營業員男女人數統計資料",
+      "path": "/opendata/OpenData_BRK01",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "證券商營業員男女人數統計資料"
+    },
+    "opendata_OpenData_BRK02": {
+      "name": "證券商分公司基本資料",
+      "path": "/opendata/OpenData_BRK02",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "證券商分公司基本資料"
+    },
+    "opendata_t187ap34_L": {
+      "name": "上市公司採累積投票制、全額連記法、候選人提名制選任董監事及當選資料彙總表",
+      "path": "/opendata/t187ap34_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司採累積投票制、全額連記法、候選人提名制選任董監事及當選資料彙總表"
+    },
+    "opendata_t187ap35_L": {
+      "name": "上市公司股東行使提案權情形彙總表",
+      "path": "/opendata/t187ap35_L",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司股東行使提案權情形彙總表"
+    },
+    "exchangeReport_TWT48U_ALL": {
+      "name": "上市股票除權除息預告表",
+      "path": "/exchangeReport/TWT48U_ALL",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市股票除權除息預告表"
+    },
+    "opendata_t187ap06_L_bd": {
+      "name": "上市公司綜合損益表(證券期貨業)",
+      "path": "/opendata/t187ap06_L_bd",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司綜合損益表(證券期貨業)"
+    },
+    "opendata_t187ap06_L_ci": {
+      "name": "上市公司綜合損益表(一般業)",
+      "path": "/opendata/t187ap06_L_ci",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司綜合損益表(一般業)"
+    },
+    "opendata_t187ap06_L_fh": {
+      "name": "上市公司綜合損益表(金控業)",
+      "path": "/opendata/t187ap06_L_fh",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司綜合損益表(金控業)"
+    },
+    "opendata_t187ap06_L_ins": {
+      "name": "上市公司綜合損益表(保險業)",
+      "path": "/opendata/t187ap06_L_ins",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司綜合損益表(保險業)"
+    },
+    "opendata_t187ap06_L_mim": {
+      "name": "上市公司綜合損益表(異業)",
+      "path": "/opendata/t187ap06_L_mim",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司綜合損益表(異業)"
+    },
+    "opendata_t187ap07_L_bd": {
+      "name": "上市公司資產負債表(證券期貨業)",
+      "path": "/opendata/t187ap07_L_bd",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司資產負債表(證券期貨業)"
+    },
+    "opendata_t187ap07_L_ci": {
+      "name": "上市公司資產負債表(一般業)",
+      "path": "/opendata/t187ap07_L_ci",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司資產負債表(一般業)"
+    },
+    "opendata_t187ap07_L_fh": {
+      "name": "上市公司資產負債表(金控業)",
+      "path": "/opendata/t187ap07_L_fh",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司資產負債表(金控業)"
+    },
+    "opendata_t187ap07_L_ins": {
+      "name": "上市公司資產負債表(保險業)",
+      "path": "/opendata/t187ap07_L_ins",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司資產負債表(保險業)"
+    },
+    "opendata_t187ap07_L_mim": {
+      "name": "上市公司資產負債表(異業)",
+      "path": "/opendata/t187ap07_L_mim",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司資產負債表(異業)"
+    },
+    "opendata_t187ap07_X_basi": {
+      "name": "公發公司資產負債表-金融業",
+      "path": "/opendata/t187ap07_X_basi",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司資產負債表-金融業"
+    },
+    "opendata_t187ap07_X_bd": {
+      "name": "公發公司資產負債表-證券期貨業",
+      "path": "/opendata/t187ap07_X_bd",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司資產負債表-證券期貨業"
+    },
+    "opendata_t187ap07_X_fh": {
+      "name": "公發公司資產負債表-金控業",
+      "path": "/opendata/t187ap07_X_fh",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司資產負債表-金控業"
+    },
+    "opendata_t187ap07_X_ins": {
+      "name": "公發公司資產負債表-保險業",
+      "path": "/opendata/t187ap07_X_ins",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司資產負債表-保險業"
+    },
+    "opendata_t187ap11_P": {
+      "name": "公發公司董監事持股餘額明細",
+      "path": "/opendata/t187ap11_P",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "公發公司董監事持股餘額明細"
+    },
+    "opendata_t187ap06_L_basi": {
+      "name": "上市公司綜合損益表(金融業)",
+      "path": "/opendata/t187ap06_L_basi",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司綜合損益表(金融業)"
+    },
+    "opendata_t187ap07_L_basi": {
+      "name": "上市公司資產負債表(金融業)",
+      "path": "/opendata/t187ap07_L_basi",
+      "source": "twse",
+      "source_name": "臺灣證券交易所",
+      "description": "上市公司資產負債表(金融業)"
+    }
+  },
+  "tpex": {
+    "tpex_mainborad_highlight": {
+      "name": "上櫃股票市場現況",
+      "path": "/tpex_mainborad_highlight",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票市場現況"
+    },
+    "tpex_securities": {
+      "name": "上櫃股票現股當沖交易標的資訊",
+      "path": "/tpex_securities",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票現股當沖交易標的資訊"
+    },
+    "tpex_spendi_today": {
+      "name": "上櫃當日公布暫停/恢復交易股票",
+      "path": "/tpex_spendi_today",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃當日公布暫停/恢復交易股票"
+    },
+    "tpex_spendi_history": {
+      "name": "上櫃歷史公布暫停/恢復交易股票",
+      "path": "/tpex_spendi_history",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃歷史公布暫停/恢復交易股票"
+    },
+    "tpex_mainboard_daily_close_quotes": {
+      "name": "上櫃股票行情",
+      "path": "/tpex_mainboard_daily_close_quotes",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票行情"
+    },
+    "tpex_mainboard_quotes": {
+      "name": "上櫃股票收盤行情",
+      "path": "/tpex_mainboard_quotes",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票收盤行情"
+    },
+    "tpex_mainboard_peratio_analysis": {
+      "name": "上櫃股票個股本益比、殖利率、股價淨值比",
+      "path": "/tpex_mainboard_peratio_analysis",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票個股本益比、殖利率、股價淨值比"
+    },
+    "tpex_mainboard_margin_balance": {
+      "name": "上櫃股票融資融券餘額",
+      "path": "/tpex_mainboard_margin_balance",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票融資融券餘額"
+    },
+    "tpex_index": {
+      "name": "櫃買指數歷史資料",
+      "path": "/tpex_index",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買指數歷史資料"
+    },
+    "tpex50_index": {
+      "name": "富櫃50指數歷史收盤指數",
+      "path": "/tpex50_index",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "富櫃50指數歷史收盤指數"
+    },
+    "tpex_intraday_trading_statistics": {
+      "name": "上櫃股票現股當沖交易統計資訊",
+      "path": "/tpex_intraday_trading_statistics",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票現股當沖交易統計資訊"
+    },
+    "tpex_active_broker_volume": {
+      "name": "上櫃股票熱門股證券商進出排行",
+      "path": "/tpex_active_broker_volume",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票熱門股證券商進出排行"
+    },
+    "tpex_margin_sbl": {
+      "name": "上櫃股票融券借券賣出餘額",
+      "path": "/tpex_margin_sbl",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票融券借券賣出餘額"
+    },
+    "tpex_exright_daily": {
+      "name": "上櫃股票除權除息計算結果表",
+      "path": "/tpex_exright_daily",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票除權除息計算結果表"
+    },
+    "tpex_exright_prepost": {
+      "name": "上櫃股票除權除息預告表",
+      "path": "/tpex_exright_prepost",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票除權除息預告表"
+    },
+    "tpex_cmode": {
+      "name": "上櫃股票變更交易、分盤交易、管理股票與停止交易資訊",
+      "path": "/tpex_cmode",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票變更交易、分盤交易、管理股票與停止交易資訊"
+    },
+    "tpex_odd_stock": {
+      "name": "上櫃股票零股交易資訊",
+      "path": "/tpex_odd_stock",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票零股交易資訊"
+    },
+    "tpex_off_market": {
+      "name": "上櫃股票盤後定價行情",
+      "path": "/tpex_off_market",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票盤後定價行情"
+    },
+    "tpex_esb_applicant_companies": {
+      "name": "申請上櫃公司",
+      "path": "/tpex_esb_applicant_companies",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "申請上櫃公司"
+    },
+    "tpex_trading_warning_information": {
+      "name": "上櫃公布注意股票資訊",
+      "path": "/tpex_trading_warning_information",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公布注意股票資訊"
+    },
+    "tpex_disposal_information": {
+      "name": "上櫃處置有價證券資訊",
+      "path": "/tpex_disposal_information",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃處置有價證券資訊"
+    },
+    "tpex_trading_warning_note": {
+      "name": "上櫃公布注意累計次數異常資訊",
+      "path": "/tpex_trading_warning_note",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公布注意累計次數異常資訊"
+    },
+    "tpex_margin_trading_term": {
+      "name": "上櫃融資融券暫停融券賣出預告表",
+      "path": "/tpex_margin_trading_term",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃融資融券暫停融券賣出預告表"
+    },
+    "tpex_margin_trading_adjust": {
+      "name": "上櫃融資融券調整成數",
+      "path": "/tpex_margin_trading_adjust",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃融資融券調整成數"
+    },
+    "tpex_margin_trading_lend": {
+      "name": "上櫃融資融券標借",
+      "path": "/tpex_margin_trading_lend",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃融資融券標借"
+    },
+    "tpex_margin_trading_marginspot": {
+      "name": "上櫃信用交易餘額概況表",
+      "path": "/tpex_margin_trading_marginspot",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃信用交易餘額概況表"
+    },
+    "tpex_margin_trading_margin_mark": {
+      "name": "上櫃平盤下得融(借)券賣出之證券名單",
+      "path": "/tpex_margin_trading_margin_mark",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃平盤下得融(借)券賣出之證券名單"
+    },
+    "tpex_margin_trading_margin_used": {
+      "name": "上櫃融資融券使用率報表",
+      "path": "/tpex_margin_trading_margin_used",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃融資融券使用率報表"
+    },
+    "tpex_margin_trading_short_sell": {
+      "name": "上櫃融資融券增減排行表",
+      "path": "/tpex_margin_trading_short_sell",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃融資融券增減排行表"
+    },
+    "tpex_3insti_qfii": {
+      "name": "上櫃僑外資及陸資持股比例排行表",
+      "path": "/tpex_3insti_qfii",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃僑外資及陸資持股比例排行表"
+    },
+    "tpex_3insti_qfii_industry": {
+      "name": "上櫃各類股僑外資及陸資持股比例表",
+      "path": "/tpex_3insti_qfii_industry",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃各類股僑外資及陸資持股比例表"
+    },
+    "tpex_3insti_daily_trading": {
+      "name": "上櫃股票三大法人買賣明細資訊",
+      "path": "/tpex_3insti_daily_trading",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票三大法人買賣明細資訊"
+    },
+    "tpex_3insti_dealer_trading": {
+      "name": "上櫃股票自營商買賣超彙總表",
+      "path": "/tpex_3insti_dealer_trading",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票自營商買賣超彙總表"
+    },
+    "tpex_ceil_non_trading": {
+      "name": "上櫃漲跌停未成交資訊",
+      "path": "/tpex_ceil_non_trading",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃漲跌停未成交資訊"
+    },
+    "tpex_daily_trading_index": {
+      "name": "上櫃日成交量值指數",
+      "path": "/tpex_daily_trading_index",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃日成交量值指數"
+    },
+    "tpex_short_sell": {
+      "name": "上櫃當日融券賣出與借券賣出成交量值",
+      "path": "/tpex_short_sell",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃當日融券賣出與借券賣出成交量值"
+    },
+    "tpex_daily_broker1": {
+      "name": "上櫃各券商當日營業金額統計表",
+      "path": "/tpex_daily_broker1",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃各券商當日營業金額統計表"
+    },
+    "tpex_active_dollar_volume": {
+      "name": "上櫃盤中個股成交金額排行",
+      "path": "/tpex_active_dollar_volume",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃盤中個股成交金額排行"
+    },
+    "tpex_active_advanced": {
+      "name": "上櫃盤中個股漲幅排行",
+      "path": "/tpex_active_advanced",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃盤中個股漲幅排行"
+    },
+    "tpex_active_declined": {
+      "name": "上櫃盤中個股跌幅排行",
+      "path": "/tpex_active_declined",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃盤中個股跌幅排行"
+    },
+    "tpex_intraday_fee": {
+      "name": "上櫃應付現股當日沖銷券差借券費率",
+      "path": "/tpex_intraday_fee",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃應付現股當日沖銷券差借券費率"
+    },
+    "tpex_intraday_trading_pre": {
+      "name": "上櫃暫停先賣後買當日沖銷交易標的預告表",
+      "path": "/tpex_intraday_trading_pre",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃暫停先賣後買當日沖銷交易標的預告表"
+    },
+    "tpex_intraday_trading_his": {
+      "name": "上櫃暫停先賣後買當日沖銷交易歷史查詢",
+      "path": "/tpex_intraday_trading_his",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃暫停先賣後買當日沖銷交易歷史查詢"
+    },
+    "tpex_daily_market_value": {
+      "name": "上櫃歷史個股市值排行",
+      "path": "/tpex_daily_market_value",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃歷史個股市值排行"
+    },
+    "tpex_daily_turnover": {
+      "name": "上櫃歷史個股週轉率排行",
+      "path": "/tpex_daily_turnover",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃歷史個股週轉率排行"
+    },
+    "tpex_trading_volumes_avg": {
+      "name": "上櫃歷史個股日均量排行",
+      "path": "/tpex_trading_volumes_avg",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃歷史個股日均量排行"
+    },
+    "tpex_trading_amount_avg": {
+      "name": "上櫃歷史個股日均值排行",
+      "path": "/tpex_trading_amount_avg",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃歷史個股日均值排行"
+    },
+    "tpex_trading_volume_ratio": {
+      "name": "上櫃歷史類股成交價量比重",
+      "path": "/tpex_trading_volume_ratio",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃歷史類股成交價量比重"
+    },
+    "tpex_pe_ratio_top10": {
+      "name": "上櫃歷史個股本益比排行",
+      "path": "/tpex_pe_ratio_top10",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃歷史個股本益比排行"
+    },
+    "tpex_daily_qutoes_block": {
+      "name": "上櫃鉅額交易日成交資訊",
+      "path": "/tpex_daily_qutoes_block",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃鉅額交易日成交資訊"
+    },
+    "tpex_daily_trading_block": {
+      "name": "上櫃個股單一證券鉅額交易日成交資訊",
+      "path": "/tpex_daily_trading_block",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃個股單一證券鉅額交易日成交資訊"
+    },
+    "tpex_daily_trading_summary_odd": {
+      "name": "上櫃鉅額交易日成交量值統計",
+      "path": "/tpex_daily_trading_summary_odd",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃鉅額交易日成交量值統計"
+    },
+    "tpex_monthly_trading_summary_block": {
+      "name": "上櫃鉅額交易月成交量值統計",
+      "path": "/tpex_monthly_trading_summary_block",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃鉅額交易月成交量值統計"
+    },
+    "tpex_yearly_trading_summary_block": {
+      "name": "上櫃鉅額交易年成交量值統計",
+      "path": "/tpex_yearly_trading_summary_block",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃鉅額交易年成交量值統計"
+    },
+    "tpex_volume_rank": {
+      "name": "上櫃歷史個股成交量排行",
+      "path": "/tpex_volume_rank",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃歷史個股成交量排行"
+    },
+    "tpex_amount_rank": {
+      "name": "上櫃歷史個股成交值排行",
+      "path": "/tpex_amount_rank",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃歷史個股成交值排行"
+    },
+    "tpex_prvol": {
+      "name": "上櫃股票等價系統成交分價表",
+      "path": "/tpex_prvol",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票等價系統成交分價表"
+    },
+    "tpex_3insti_summary": {
+      "name": "上櫃股票三大法人買賣金額彙總表",
+      "path": "/tpex_3insti_summary",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票三大法人買賣金額彙總表"
+    },
+    "tpex_3insti_trading": {
+      "name": "上櫃股票投信買賣超彙總表",
+      "path": "/tpex_3insti_trading",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票投信買賣超彙總表"
+    },
+    "tpex_daily_trade_block_day": {
+      "name": "鉅額交易歷史成交資訊",
+      "path": "/tpex_daily_trade_block_day",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "鉅額交易歷史成交資訊"
+    },
+    "tpex_delayed_stock_open": {
+      "name": "上櫃每日暫緩開盤股票",
+      "path": "/tpex_delayed_stock_open",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃每日暫緩開盤股票"
+    },
+    "tpex_delayed_stock_close": {
+      "name": "上櫃每日暫緩收盤股票",
+      "path": "/tpex_delayed_stock_close",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃每日暫緩收盤股票"
+    },
+    "tpex_ipo_no_limit": {
+      "name": "上櫃首五日無漲跌幅資訊",
+      "path": "/tpex_ipo_no_limit",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃首五日無漲跌幅資訊"
+    },
+    "tpex_esb_eps_rank": {
+      "name": "本國興櫃公司EPS排名",
+      "path": "/tpex_esb_eps_rank",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "本國興櫃公司EPS排名"
+    },
+    "tpex_esb_capitals_rank": {
+      "name": "興櫃公司資本額排名",
+      "path": "/tpex_esb_capitals_rank",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司資本額排名"
+    },
+    "tpex200_change": {
+      "name": "櫃買「富櫃200指數」當日收盤指數",
+      "path": "/tpex200_change",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「富櫃200指數」當日收盤指數"
+    },
+    "tpcgi_constituents": {
+      "name": "上櫃公司治理指數當日成分股資訊",
+      "path": "/tpcgi_constituents",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司治理指數當日成分股資訊"
+    },
+    "tpcgi_reward_index": {
+      "name": "上櫃公司治理指數歷史收盤指數",
+      "path": "/tpcgi_reward_index",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司治理指數歷史收盤指數"
+    },
+    "tpcgi_change": {
+      "name": "上櫃公司治理指數當日收盤指數",
+      "path": "/tpcgi_change",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司治理指數當日收盤指數"
+    },
+    "tpex_index_consti": {
+      "name": "櫃買指數成分股",
+      "path": "/tpex_index_consti",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買指數成分股"
+    },
+    "tpex_reward_index": {
+      "name": "櫃買指數與報酬指數之收市指數",
+      "path": "/tpex_reward_index",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買指數與報酬指數之收市指數"
+    },
+    "tpex50_constituents": {
+      "name": "櫃買「富櫃50指數」當日成分股",
+      "path": "/tpex50_constituents",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「富櫃50指數」當日成分股"
+    },
+    "tpex50_change": {
+      "name": "櫃買「富櫃50指數」當日收盤指數",
+      "path": "/tpex50_change",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「富櫃50指數」當日收盤指數"
+    },
+    "tphd_constituents": {
+      "name": "櫃買「高殖利率指數」當日成分股",
+      "path": "/tphd_constituents",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「高殖利率指數」當日成分股"
+    },
+    "tphd_change": {
+      "name": "櫃買「高殖利率指數」當日收盤指數",
+      "path": "/tphd_change",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「高殖利率指數」當日收盤指數"
+    },
+    "tpci_constituents": {
+      "name": "櫃買「薪酬指數」當日成分股",
+      "path": "/tpci_constituents",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「薪酬指數」當日成分股"
+    },
+    "tpci_change": {
+      "name": "櫃買「薪酬指數」當日收盤指數",
+      "path": "/tpci_change",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「薪酬指數」當日收盤指數"
+    },
+    "tpci_reward_index": {
+      "name": "櫃買「薪酬指數」歷史收盤指數",
+      "path": "/tpci_reward_index",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「薪酬指數」歷史收盤指數"
+    },
+    "tpex_emp88_constituents": {
+      "name": "櫃買「勞工就業88指數」當日成分股",
+      "path": "/tpex_emp88_constituents",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「勞工就業88指數」當日成分股"
+    },
+    "tpex_emp88_change": {
+      "name": "櫃買「勞工就業88指數」當日收盤指數",
+      "path": "/tpex_emp88_change",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「勞工就業88指數」當日收盤指數"
+    },
+    "tpex_emp88_reward_index": {
+      "name": "櫃買「勞工就業88指數」歷史收盤指數",
+      "path": "/tpex_emp88_reward_index",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「勞工就業88指數」歷史收盤指數"
+    },
+    "tpex_dpsp_monthly_CBmcs007": {
+      "name": "可轉債資產交換ASO及ASW銀行承作餘額",
+      "path": "/tpex_dpsp_monthly_CBmcs007",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "可轉債資產交換ASO及ASW銀行承作餘額"
+    },
+    "tpex_international_bond_quotes": {
+      "name": "國際債券當日盤中報價行情表(含寶島債)",
+      "path": "/tpex_international_bond_quotes",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "國際債券當日盤中報價行情表(含寶島債)"
+    },
+    "tpex_international_bond_trade": {
+      "name": "國際債券當日盤中成交行情表(含寶島債)",
+      "path": "/tpex_international_bond_trade",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "國際債券當日盤中成交行情表(含寶島債)"
+    },
+    "tpex_international_bond_issue_investor": {
+      "name": "國際債券(一般投資人)",
+      "path": "/tpex_international_bond_issue_investor",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "國際債券(一般投資人)"
+    },
+    "tpex_international_bond_issue_org": {
+      "name": "國際債券(僅售予專業投資人者)",
+      "path": "/tpex_international_bond_issue_org",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "國際債券(僅售予專業投資人者)"
+    },
+    "t187ap46_O_21": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-職業安全衛生",
+      "path": "/t187ap46_O_21",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-職業安全衛生"
+    },
+    "t187ap46_O_9": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-功能性委員會",
+      "path": "/t187ap46_O_9",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-功能性委員會"
+    },
+    "t187ap46_O_8": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-氣候相關議題管理",
+      "path": "/t187ap46_O_8",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-氣候相關議題管理"
+    },
+    "tpex_esb_disposal_information": {
+      "name": "興櫃處置有價證券資訊",
+      "path": "/tpex_esb_disposal_information",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃處置有價證券資訊"
+    },
+    "tpex_esb_warning_information": {
+      "name": "興櫃公布注意有價證券資訊",
+      "path": "/tpex_esb_warning_information",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公布注意有價證券資訊"
+    },
+    "tpex_esb_recommended_dealer": {
+      "name": "興櫃推薦證券商與推薦之股票",
+      "path": "/tpex_esb_recommended_dealer",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃推薦證券商與推薦之股票"
+    },
+    "tpex_warrant_gold": {
+      "name": "黃金現貨權證發行基本資料",
+      "path": "/tpex_warrant_gold",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "黃金現貨權證發行基本資料"
+    },
+    "tpex_warrant_gold_quts": {
+      "name": "黃金現貨權證收盤行情",
+      "path": "/tpex_warrant_gold_quts",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "黃金現貨權證收盤行情"
+    },
+    "tpex_warrant_daily_quts": {
+      "name": "上櫃權證收盤行情日報表",
+      "path": "/tpex_warrant_daily_quts",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃權證收盤行情日報表"
+    },
+    "tpex_warrant_monthly_quts": {
+      "name": "上櫃權證收盤行情月報表",
+      "path": "/tpex_warrant_monthly_quts",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃權證收盤行情月報表"
+    },
+    "tpex_warrant_issue": {
+      "name": "上櫃權證發行基本資料",
+      "path": "/tpex_warrant_issue",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃權證發行基本資料"
+    },
+    "tpex_warrant_wcb_daily_quts": {
+      "name": "上櫃牛熊證收盤行情(不含展延型牛熊證)日報表",
+      "path": "/tpex_warrant_wcb_daily_quts",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃牛熊證收盤行情(不含展延型牛熊證)日報表"
+    },
+    "tpex_warrant_wcb_monthly_quts": {
+      "name": "上櫃牛熊證收盤行情(不含展延型牛熊證)月報表",
+      "path": "/tpex_warrant_wcb_monthly_quts",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃牛熊證收盤行情(不含展延型牛熊證)月報表"
+    },
+    "tpex_warrant_wcb_issue": {
+      "name": "上櫃牛熊證發行基本資料(不含展延型牛熊證)",
+      "path": "/tpex_warrant_wcb_issue",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃牛熊證發行基本資料(不含展延型牛熊證)"
+    },
+    "tpex_warrant_wxy_daily_quts": {
+      "name": "上櫃展延型牛熊證收盤行情日報表",
+      "path": "/tpex_warrant_wxy_daily_quts",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃展延型牛熊證收盤行情日報表"
+    },
+    "tpex_warrant_wxy_monthly_quts": {
+      "name": "上櫃展延型牛熊證收盤行情月報表",
+      "path": "/tpex_warrant_wxy_monthly_quts",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃展延型牛熊證收盤行情月報表"
+    },
+    "tpex_warrant_wxy_issue": {
+      "name": "上櫃展延型牛熊證發行基本資料",
+      "path": "/tpex_warrant_wxy_issue",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃展延型牛熊證發行基本資料"
+    },
+    "tpex_warrant_quts": {
+      "name": "單筆權證成交資料",
+      "path": "/tpex_warrant_quts",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "單筆權證成交資料"
+    },
+    "tpex_warrant_statistics": {
+      "name": "每日權證交易人數(上櫃)",
+      "path": "/tpex_warrant_statistics",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "每日權證交易人數(上櫃)"
+    },
+    "tpex_warrant": {
+      "name": "上櫃股票權證資訊",
+      "path": "/tpex_warrant",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票權證資訊"
+    },
+    "tpex_warrant_suspend_today": {
+      "name": "上櫃權證當日暫停/恢復交易資訊",
+      "path": "/tpex_warrant_suspend_today",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃權證當日暫停/恢復交易資訊"
+    },
+    "tpex_warrant_suspend_history": {
+      "name": "上櫃權證歷史暫停/恢復交易資訊",
+      "path": "/tpex_warrant_suspend_history",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃權證歷史暫停/恢復交易資訊"
+    },
+    "tpex_opfund_latest": {
+      "name": "開放式基金當日行情表",
+      "path": "/tpex_opfund_latest",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "開放式基金當日行情表"
+    },
+    "tpex_opfund_recommended_dealer": {
+      "name": "開放式基金受益憑證造市商與造市之基金",
+      "path": "/tpex_opfund_recommended_dealer",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "開放式基金受益憑證造市商與造市之基金"
+    },
+    "tpex_opfund_market_highlight": {
+      "name": "開放式基金市場現況",
+      "path": "/tpex_opfund_market_highlight",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "開放式基金市場現況"
+    },
+    "tpex_gold_market_highlight": {
+      "name": "黃金現貨市場現況",
+      "path": "/tpex_gold_market_highlight",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "黃金現貨市場現況"
+    },
+    "tpex_gold_recommended_dealer": {
+      "name": "造市商與造市之黃金現貨",
+      "path": "/tpex_gold_recommended_dealer",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "造市商與造市之黃金現貨"
+    },
+    "tpex_gold_latest": {
+      "name": "黃金現貨當日行情表",
+      "path": "/tpex_gold_latest",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "黃金現貨當日行情表"
+    },
+    "tpex_gisa_highlight": {
+      "name": "創櫃板公司市場現況",
+      "path": "/tpex_gisa_highlight",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "創櫃板公司市場現況"
+    },
+    "tpex_gisa_company": {
+      "name": "創櫃板公司資訊",
+      "path": "/tpex_gisa_company",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "創櫃板公司資訊"
+    },
+    "tpex_gisa_financing_before": {
+      "name": "於登錄創櫃板前辦理籌資資訊",
+      "path": "/tpex_gisa_financing_before",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "於登錄創櫃板前辦理籌資資訊"
+    },
+    "t187ap46_O_20": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-反競爭行為法律訴訟",
+      "path": "/t187ap46_O_20",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-反競爭行為法律訴訟"
+    },
+    "t187ap46_O_19": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-風險管理政策",
+      "path": "/t187ap46_O_19",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-風險管理政策"
+    },
+    "t187ap46_O_15": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-社區關係",
+      "path": "/t187ap46_O_15",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-社區關係"
+    },
+    "t187ap46_O_13": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-供應鏈管理",
+      "path": "/t187ap46_O_13",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-供應鏈管理"
+    },
+    "t187ap46_O_12": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-食品安全",
+      "path": "/t187ap46_O_12",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-食品安全"
+    },
+    "t187ap46_O_14": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-產品品質與安全",
+      "path": "/t187ap46_O_14",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-產品品質與安全"
+    },
+    "tpex200_constituents": {
+      "name": "櫃買「富櫃200指數」當日成分股",
+      "path": "/tpex200_constituents",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "櫃買「富櫃200指數」當日成分股"
+    },
+    "t187ap41_O": {
+      "name": "上櫃公司召開股東常 (臨時) 會日期、地點及採用電子投票情形等資料彙總表",
+      "path": "/t187ap41_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司召開股東常 (臨時) 會日期、地點及採用電子投票情形等資料彙總表"
+    },
+    "t187ap05_R": {
+      "name": "興櫃公司每月營業收入彙總表",
+      "path": "/t187ap05_R",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司每月營業收入彙總表"
+    },
+    "t187ap46_O_4": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-廢棄物管理",
+      "path": "/t187ap46_O_4",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-廢棄物管理"
+    },
+    "t187ap46_O_2": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-能源管理",
+      "path": "/t187ap46_O_2",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-能源管理"
+    },
+    "t187ap46_O_7": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-投資人溝通",
+      "path": "/t187ap46_O_7",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-投資人溝通"
+    },
+    "t187ap46_O_1": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-溫室氣體排放",
+      "path": "/t187ap46_O_1",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-溫室氣體排放"
+    },
+    "t187ap46_O_6": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-董事會",
+      "path": "/t187ap46_O_6",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-董事會"
+    },
+    "t187ap46_O_5": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-人力發展",
+      "path": "/t187ap46_O_5",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-人力發展"
+    },
+    "t187ap46_O_3": {
+      "name": "上櫃公司企業ESG資訊揭露彙總資料-水資源管理",
+      "path": "/t187ap46_O_3",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司企業ESG資訊揭露彙總資料-水資源管理"
+    },
+    "mopsfin_t187ap05_OA": {
+      "name": "二十九大類股營收變化統計表",
+      "path": "/mopsfin_t187ap05_OA",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "二十九大類股營收變化統計表"
+    },
+    "mopsfin_t187ap05_OB": {
+      "name": "發行公司營收創新高一覽表(上櫃)",
+      "path": "/mopsfin_t187ap05_OB",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "發行公司營收創新高一覽表(上櫃)"
+    },
+    "BDdos216UTF": {
+      "name": "美元固定利率不可贖回國際債券理論價格",
+      "path": "/BDdos216UTF",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "美元固定利率不可贖回國際債券理論價格"
+    },
+    "BDdos215UTF": {
+      "name": "美元附息固定利率可贖回國際債券理論價格",
+      "path": "/BDdos215UTF",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "美元附息固定利率可贖回國際債券理論價格"
+    },
+    "BDdos209UTF": {
+      "name": "美元零息可贖回國際債券理論價格",
+      "path": "/BDdos209UTF",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "美元零息可贖回國際債券理論價格"
+    },
+    "tpex_gisa_financing_history": {
+      "name": "創櫃板公司透過籌資系統辦理籌資資訊",
+      "path": "/tpex_gisa_financing_history",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "創櫃板公司透過籌資系統辦理籌資資訊"
+    },
+    "mopsfin_t187ap35_O": {
+      "name": "上櫃公司股東行使提案權情形彙總表",
+      "path": "/mopsfin_t187ap35_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司股東行使提案權情形彙總表"
+    },
+    "mopsfin_t187ap37_O": {
+      "name": "上櫃權證基本資料彙總表",
+      "path": "/mopsfin_t187ap37_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃權證基本資料彙總表"
+    },
+    "mopsfin_t187ap42_O": {
+      "name": "上櫃認購(售)權證每日成交資料檔",
+      "path": "/mopsfin_t187ap42_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃認購(售)權證每日成交資料檔"
+    },
+    "mopsfin_t187ap32_O": {
+      "name": "上櫃公司公司治理之相關規程規則",
+      "path": "/mopsfin_t187ap32_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司公司治理之相關規程規則"
+    },
+    "mopsfin_t187ap34_O": {
+      "name": "上櫃公司採累積投票制、全額連記法、候選人提名制選任董監事及當選資料彙總表",
+      "path": "/mopsfin_t187ap34_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司採累積投票制、全額連記法、候選人提名制選任董監事及當選資料彙總表"
+    },
+    "mopsfin_t187ap33_O": {
+      "name": "上櫃公司董事長是否兼任總經理",
+      "path": "/mopsfin_t187ap33_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司董事長是否兼任總經理"
+    },
+    "mopsfin_t187ap31_O": {
+      "name": "上櫃公司財務報告經監察人承認情形",
+      "path": "/mopsfin_t187ap31_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司財務報告經監察人承認情形"
+    },
+    "mopsfin_t187ap09_O": {
+      "name": "上櫃公司董事、監察人質權設定占董事及監察人實際持有股數彙總表",
+      "path": "/mopsfin_t187ap09_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司董事、監察人質權設定占董事及監察人實際持有股數彙總表"
+    },
+    "mopsfin_t187ap10_O": {
+      "name": "上櫃公司董事、監察人持股不足法定成數連續達3個月以上彙總表",
+      "path": "/mopsfin_t187ap10_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司董事、監察人持股不足法定成數連續達3個月以上彙總表"
+    },
+    "mopsfin_t187ap24_O": {
+      "name": "上櫃公司經營權及營業範圍異(變)動專區-經營權異動公司",
+      "path": "/mopsfin_t187ap24_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司經營權及營業範圍異(變)動專區-經營權異動公司"
+    },
+    "mopsfin_t187ap25_O": {
+      "name": "上櫃公司經營權及營業範圍異(變)動專區-營業範圍重大變更公司",
+      "path": "/mopsfin_t187ap25_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司經營權及營業範圍異(變)動專區-營業範圍重大變更公司"
+    },
+    "tpex_gisa_financing_in_process": {
+      "name": "創櫃板辦理中籌資資訊",
+      "path": "/tpex_gisa_financing_in_process",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "創櫃板辦理中籌資資訊"
+    },
+    "mopsfin_t187ap03_O": {
+      "name": "上櫃股票基本資料",
+      "path": "/mopsfin_t187ap03_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票基本資料"
+    },
+    "tpex_3insti_qfii_trading": {
+      "name": "上櫃股票外資及陸資買賣超彙總表",
+      "path": "/tpex_3insti_qfii_trading",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票外資及陸資買賣超彙總表"
+    },
+    "tpex_esb_latest_statistics": {
+      "name": "興櫃股票當日行情表",
+      "path": "/tpex_esb_latest_statistics",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃股票當日行情表"
+    },
+    "mopsfin_t187ap36_O": {
+      "name": "上櫃認購(售)權證年度發行量概況統計表",
+      "path": "/mopsfin_t187ap36_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃認購(售)權證年度發行量概況統計表"
+    },
+    "mopsfin_t187ap03_R": {
+      "name": "興櫃公司基本資料",
+      "path": "/mopsfin_t187ap03_R",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司基本資料"
+    },
+    "mopsfin_t187ap04_O": {
+      "name": "上櫃公司每日重大訊息",
+      "path": "/mopsfin_t187ap04_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司每日重大訊息"
+    },
+    "mopsfin_t187ap01": {
+      "name": "券商業務別人員數",
+      "path": "/mopsfin_t187ap01",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "券商業務別人員數"
+    },
+    "mopsfin_t187ap02_O": {
+      "name": "上櫃公司持股逾 10% 大股東名單",
+      "path": "/mopsfin_t187ap02_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司持股逾 10% 大股東名單"
+    },
+    "mopsfin_t187ap26_O": {
+      "name": "上櫃公司經營權及營業範圍異(變)動專區-經營權異動且營業範圍重大變更停止買賣公司",
+      "path": "/mopsfin_t187ap26_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司經營權及營業範圍異(變)動專區-經營權異動且營業範圍重大變更停止買賣公司"
+    },
+    "mopsfin_t187ap27_O": {
+      "name": "上櫃公司經營權及營業範圍異(變)動專區-經營權異動且營業範圍重大變更列為變更交易公司",
+      "path": "/mopsfin_t187ap27_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司經營權及營業範圍異(變)動專區-經營權異動且營業範圍重大變更列為變更交易公司"
+    },
+    "mopsfin_t187ap05_O": {
+      "name": "上櫃公司每月營業收入彙總表",
+      "path": "/mopsfin_t187ap05_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司每月營業收入彙總表"
+    },
+    "mopsfin_t187ap39_O": {
+      "name": "上櫃股利分派情形-董事會通過",
+      "path": "/mopsfin_t187ap39_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股利分派情形-董事會通過"
+    },
+    "bond_cb_daily": {
+      "name": "轉(交)換公司債買賣斷券商買賣日報表",
+      "path": "/bond_cb_daily",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "轉(交)換公司債買賣斷券商買賣日報表"
+    },
+    "mopsfin_t187ap07_O_basi": {
+      "name": "上櫃公司資產負債表(金融業)",
+      "path": "/mopsfin_t187ap07_O_basi",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司資產負債表(金融業)"
+    },
+    "mopsfin_t187ap07_O_bd": {
+      "name": "上櫃公司資產負債表(證券期貨業)",
+      "path": "/mopsfin_t187ap07_O_bd",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司資產負債表(證券期貨業)"
+    },
+    "mopsfin_t187ap07_O_ci": {
+      "name": "上櫃公司資產負債表(一般業)",
+      "path": "/mopsfin_t187ap07_O_ci",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司資產負債表(一般業)"
+    },
+    "mopsfin_t187ap07_O_fh": {
+      "name": "上櫃公司資產負債表(金控業)",
+      "path": "/mopsfin_t187ap07_O_fh",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司資產負債表(金控業)"
+    },
+    "mopsfin_t187ap07_O_ins": {
+      "name": "上櫃公司資產負債表(保險業)",
+      "path": "/mopsfin_t187ap07_O_ins",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司資產負債表(保險業)"
+    },
+    "mopsfin_t187ap07_O_mim": {
+      "name": "上櫃公司資產負債表(異業)",
+      "path": "/mopsfin_t187ap07_O_mim",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司資產負債表(異業)"
+    },
+    "mopsfin_t187ap06_O_basi": {
+      "name": "上櫃公司綜合損益表(金融業)",
+      "path": "/mopsfin_t187ap06_O_basi",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司綜合損益表(金融業)"
+    },
+    "mopsfin_t187ap06_O_bd": {
+      "name": "上櫃公司綜合損益表(證券期貨業)",
+      "path": "/mopsfin_t187ap06_O_bd",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司綜合損益表(證券期貨業)"
+    },
+    "mopsfin_t187ap06_O_ci": {
+      "name": "上櫃公司綜合損益表(一般業)",
+      "path": "/mopsfin_t187ap06_O_ci",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司綜合損益表(一般業)"
+    },
+    "mopsfin_t187ap06_O_fh": {
+      "name": "上櫃公司綜合損益表(金控業)",
+      "path": "/mopsfin_t187ap06_O_fh",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司綜合損益表(金控業)"
+    },
+    "mopsfin_t187ap06_O_ins": {
+      "name": "上櫃公司綜合損益表(保險業)",
+      "path": "/mopsfin_t187ap06_O_ins",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司綜合損益表(保險業)"
+    },
+    "mopsfin_t187ap06_O_mim": {
+      "name": "上櫃公司綜合損益表(異業)",
+      "path": "/mopsfin_t187ap06_O_mim",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司綜合損益表(異業)"
+    },
+    "mopsfin_t187ap06_O_basiA": {
+      "name": "上櫃公司財報資訊(金融業)",
+      "path": "/mopsfin_t187ap06_O_basiA",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司財報資訊(金融業)"
+    },
+    "mopsfin_t187ap06_O_bdA": {
+      "name": "上櫃公司財報資訊(證券期貨業)",
+      "path": "/mopsfin_t187ap06_O_bdA",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司財報資訊(證券期貨業)"
+    },
+    "mopsfin_t187ap06_O_ciA": {
+      "name": "上櫃公司財報資訊( 一般業)",
+      "path": "/mopsfin_t187ap06_O_ciA",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司財報資訊( 一般業)"
+    },
+    "mopsfin_t187ap06_O_fhA": {
+      "name": "上櫃公司財報資訊(金控業)",
+      "path": "/mopsfin_t187ap06_O_fhA",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司財報資訊(金控業)"
+    },
+    "mopsfin_t187ap06_O_insA": {
+      "name": "上櫃公司財報資訊(保險業)",
+      "path": "/mopsfin_t187ap06_O_insA",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司財報資訊(保險業)"
+    },
+    "mopsfin_t187ap06_O_mimA": {
+      "name": "上櫃公司財報資訊(異業)",
+      "path": "/mopsfin_t187ap06_O_mimA",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司財報資訊(異業)"
+    },
+    "mopsfin_t187ap07_U_bd": {
+      "name": "興櫃公司資產負債表-證券期貨業",
+      "path": "/mopsfin_t187ap07_U_bd",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司資產負債表-證券期貨業"
+    },
+    "mopsfin_t187ap07_U_ci": {
+      "name": "興櫃公司資產負債表-一般業",
+      "path": "/mopsfin_t187ap07_U_ci",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司資產負債表-一般業"
+    },
+    "mopsfin_t187ap07_U_fh": {
+      "name": "興櫃公司資產負債表-金控業",
+      "path": "/mopsfin_t187ap07_U_fh",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司資產負債表-金控業"
+    },
+    "mopsfin_t187ap07_U_ins": {
+      "name": "興櫃公司資產負債表-保險業",
+      "path": "/mopsfin_t187ap07_U_ins",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司資產負債表-保險業"
+    },
+    "mopsfin_t187ap07_U_mim": {
+      "name": "興櫃公司資產負債表-異業",
+      "path": "/mopsfin_t187ap07_U_mim",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司資產負債表-異業"
+    },
+    "mopsfin_t187ap06_U_basi": {
+      "name": "興櫃公司綜合損益表-金融業",
+      "path": "/mopsfin_t187ap06_U_basi",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司綜合損益表-金融業"
+    },
+    "mopsfin_t187ap06_U_bd": {
+      "name": "興櫃公司綜合損益表-證券期貨業",
+      "path": "/mopsfin_t187ap06_U_bd",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司綜合損益表-證券期貨業"
+    },
+    "mopsfin_t187ap06_U_ci": {
+      "name": "興櫃公司綜合損益表-一般業",
+      "path": "/mopsfin_t187ap06_U_ci",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司綜合損益表-一般業"
+    },
+    "mopsfin_t187ap06_U_fh": {
+      "name": "興櫃公司綜合損益表-金控業",
+      "path": "/mopsfin_t187ap06_U_fh",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司綜合損益表-金控業"
+    },
+    "mopsfin_t187ap06_U_ins": {
+      "name": "興櫃公司綜合損益表-保險業",
+      "path": "/mopsfin_t187ap06_U_ins",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司綜合損益表-保險業"
+    },
+    "mopsfin_t187ap06_U_mim": {
+      "name": "興櫃公司綜合損益表-異業",
+      "path": "/mopsfin_t187ap06_U_mim",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司綜合損益表-異業"
+    },
+    "mopsfin_t187ap07_U_basi": {
+      "name": "興櫃公司資產負債表-金融業",
+      "path": "/mopsfin_t187ap07_U_basi",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司資產負債表-金融業"
+    },
+    "mopsfin_t187ap11_R": {
+      "name": "興櫃公司董監事持股餘額明細資料",
+      "path": "/mopsfin_t187ap11_R",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃公司董監事持股餘額明細資料"
+    },
+    "mopsfin_t187ap14_O": {
+      "name": "上櫃公司各產業EPS統計資訊",
+      "path": "/mopsfin_t187ap14_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司各產業EPS統計資訊"
+    },
+    "mopsfin_t187ap15_O": {
+      "name": "上櫃公司截至各季綜合損益財測達成情形(簡式)",
+      "path": "/mopsfin_t187ap15_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司截至各季綜合損益財測達成情形(簡式)"
+    },
+    "mopsfin_t187ap16_O": {
+      "name": "上櫃公司當季綜合損益經會計師查核(核閱)數與當季預測數差異達百分之十以上者，或截至當季累計差異達百分之二十以上者(簡式)",
+      "path": "/mopsfin_t187ap16_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司當季綜合損益經會計師查核(核閱)數與當季預測數差異達百分之十以上者，或截至當季累計差異達百分之二十以上者(簡式)"
+    },
+    "mopsfin_187ap17_O": {
+      "name": "上櫃公司營益分析查詢彙總表(全體公司彙總報表)",
+      "path": "/mopsfin_187ap17_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司營益分析查詢彙總表(全體公司彙總報表)"
+    },
+    "mopsfin_t187ap08_O": {
+      "name": "上櫃公司董事、監察人持股不足法定成數彙總表",
+      "path": "/mopsfin_t187ap08_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司董事、監察人持股不足法定成數彙總表"
+    },
+    "mopsfin_t187ap11_O": {
+      "name": "上櫃公司董監事持股餘額明細資料",
+      "path": "/mopsfin_t187ap11_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司董監事持股餘額明細資料"
+    },
+    "mopsfin_t187ap12_O": {
+      "name": "上櫃公司每日內部人持股轉讓事前申報表-持股轉讓日報表",
+      "path": "/mopsfin_t187ap12_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司每日內部人持股轉讓事前申報表-持股轉讓日報表"
+    },
+    "mopsfin_t187ap13_O": {
+      "name": "上櫃公司每日內部人持股轉讓事前申報表-持股未轉讓日報表",
+      "path": "/mopsfin_t187ap13_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司每日內部人持股轉讓事前申報表-持股未轉讓日報表"
+    },
+    "mopsfin_t187ap22_O": {
+      "name": "上櫃公司金管會證券期貨局裁罰案件專區",
+      "path": "/mopsfin_t187ap22_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司金管會證券期貨局裁罰案件專區"
+    },
+    "mopsfin_t187ap30_O": {
+      "name": "上櫃公司獨立董監事兼任情形彙總表",
+      "path": "/mopsfin_t187ap30_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司獨立董監事兼任情形彙總表"
+    },
+    "mopsfin_t187ap29_A_O": {
+      "name": "上櫃公司董事酬金相關資訊",
+      "path": "/mopsfin_t187ap29_A_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司董事酬金相關資訊"
+    },
+    "mopsfin_t187ap29_B_O": {
+      "name": "上櫃公司監察人酬金相關資訊",
+      "path": "/mopsfin_t187ap29_B_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司監察人酬金相關資訊"
+    },
+    "mopsfin_t187ap29_C_O": {
+      "name": "上櫃公司合併報表董事酬金相關資訊",
+      "path": "/mopsfin_t187ap29_C_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司合併報表董事酬金相關資訊"
+    },
+    "mopsfin_t187ap29_D_O": {
+      "name": "上櫃公司合併報表監察人酬金相關資訊",
+      "path": "/mopsfin_t187ap29_D_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司合併報表監察人酬金相關資訊"
+    },
+    "mopsfin_t187ap23_O": {
+      "name": "上櫃公司違反資訊申報、重大訊息及說明記者會規定專區",
+      "path": "/mopsfin_t187ap23_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃公司違反資訊申報、重大訊息及說明記者會規定專區"
+    },
+    "mopsfin_t187ap19_O": {
+      "name": "電子式交易統計資訊(上櫃)",
+      "path": "/mopsfin_t187ap19_O",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "電子式交易統計資訊(上櫃)"
+    },
+    "tpex_esb_highlight": {
+      "name": "興櫃股票市場現況",
+      "path": "/tpex_esb_highlight",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "興櫃股票市場現況"
+    },
+    "bond_ISSBD1_data": {
+      "name": "公債發行資料下載",
+      "path": "/bond_ISSBD1_data",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "公債發行資料下載"
+    },
+    "bond_ISSBD2_data": {
+      "name": "外國金融債發行資料下載",
+      "path": "/bond_ISSBD2_data",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "外國金融債發行資料下載"
+    },
+    "bond_ISSBD3_data": {
+      "name": "金融債發行資料下載",
+      "path": "/bond_ISSBD3_data",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "金融債發行資料下載"
+    },
+    "bond_ISSBD4_data": {
+      "name": "普通債發行資料下載",
+      "path": "/bond_ISSBD4_data",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "普通債發行資料下載"
+    },
+    "bond_ISSBD5_data": {
+      "name": "轉(交)換債發行資料下載",
+      "path": "/bond_ISSBD5_data",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "轉(交)換債發行資料下載"
+    },
+    "bond_ISSBD6_data": {
+      "name": "海外轉換債發行資料下載",
+      "path": "/bond_ISSBD6_data",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "海外轉換債發行資料下載"
+    },
+    "bond_ISSBD7_data": {
+      "name": "附認股權公司債發行資料下載",
+      "path": "/bond_ISSBD7_data",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "附認股權公司債發行資料下載"
+    },
+    "bond_ISSBD8_data": {
+      "name": "海外附認股權公司債發行資料下載",
+      "path": "/bond_ISSBD8_data",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "海外附認股權公司債發行資料下載"
+    },
+    "bond_ISSBD9_data": {
+      "name": "海外普通債發行資料下載",
+      "path": "/bond_ISSBD9_data",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "海外普通債發行資料下載"
+    },
+    "bond_ISSBD10_data": {
+      "name": "國際債券(寶島債券)-本國發行人及第一、二上市(櫃)公司之外國發行人發行資料下載",
+      "path": "/bond_ISSBD10_data",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "國際債券(寶島債券)-本國發行人及第一、二上市(櫃)公司之外國發行人發行資料下載"
+    },
+    "bond_ISSBD11_data": {
+      "name": "國際債券(寶島債券)-外國發行人(在我國未公開發行股權商品者)發行資料下載",
+      "path": "/bond_ISSBD11_data",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "國際債券(寶島債券)-外國發行人(在我國未公開發行股權商品者)發行資料下載"
+    },
+    "tpex_daily_broker2": {
+      "name": "上櫃股票各券商總公司當日營業金額統計表",
+      "path": "/tpex_daily_broker2",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "上櫃股票各券商總公司當日營業金額統計表"
+    },
+    "tphd_index": {
+      "name": "高殖利率指數歷史收盤指數",
+      "path": "/tphd_index",
+      "source": "tpex",
+      "source_name": "證券櫃檯買賣中心",
+      "description": "高殖利率指數歷史收盤指數"
+    }
+  }
+}
