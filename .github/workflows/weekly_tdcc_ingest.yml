@@ -1,0 +1,58 @@
+name: Weekly TDCC Ingest
+
+on:
+  schedule:
+    # 台灣時間週五 21:30 CST (UTC 13:30) - 第一輪發布檢查
+    - cron: '30 13 * * 5'
+    # 台灣時間週六 09:30 CST (UTC 01:30) - 延遲發布補抓檢查
+    - cron: '30 1 * * 6'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '強制覆寫 (忽略 MD5 相同判定)'
+        type: boolean
+        default: false
+
+jobs:
+  ingest_tdcc:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run TDCC Share Distribution Ingestion
+        run: |
+          CMD="python scripts/fetch_tdcc.py"
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            CMD="$CMD --force"
+          fi
+          echo "Executing: $CMD"
+          eval $CMD
+
+      - name: Git Commit & Push (Idempotent)
+        run: |
+          git config --local user.name "datalake-bot"
+          git config --local user.email "bot@users.noreply.github.com"
+          git add data/tdcc/
+          if git diff --staged --quiet; then
+            echo "TDCC data already up to date. Skipping commit."
+          else
+            git commit -m "chore(tdcc): update weekly share distribution"
+            git pull --rebase origin main || true
+            git push
+          fi
+

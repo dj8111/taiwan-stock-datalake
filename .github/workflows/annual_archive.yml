@@ -1,0 +1,91 @@
+name: Annual Archive & Prune
+
+on:
+  schedule:
+    # 每年 1 月 1 日 台灣時間 03:00 CST (UTC 12/31 19:00)
+    - cron: '0 19 31 12 *'
+  workflow_dispatch:
+    inputs:
+      target_year:
+        description: '手動指定歸檔年份 (如 2026，留空則自動推算為上一年度)'
+        required: false
+        default: ''
+
+jobs:
+  archive_and_prune:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine Archive Year
+        run: |
+          if [ -n "${{ github.event.inputs.target_year }}" ]; then
+            YEAR="${{ github.event.inputs.target_year }}"
+          else
+            YEAR=$(date -d "last year" +%Y 2>/dev/null || date -v-1y +%Y)
+          fi
+          echo "ARCHIVE_YEAR=$YEAR" >> $GITHUB_ENV
+          echo "Target archive year: $YEAR"
+
+      - name: Create Tarball & Upload S3/R2
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+        run: python scripts/archive_storage.py --year "${{ env.ARCHIVE_YEAR }}"
+
+      - name: Release Archive Asset to GitHub Releases
+        uses: softprops/action-gh-release@v2
+        if: hashFiles(format('taiwan_stock_{0}.tar.gz', env.ARCHIVE_YEAR)) != ''
+        with:
+          tag_name: archive-${{ env.ARCHIVE_YEAR }}
+          name: Taiwan Stock Archive ${{ env.ARCHIVE_YEAR }}
+          body: |
+            Automated full dataset archive for year ${{ env.ARCHIVE_YEAR }}.
+            Includes all TWSE, TPEx daily parquet snapshots, and TDCC weekly shareholder distribution.
+          files: |
+            taiwan_stock_${{ env.ARCHIVE_YEAR }}.tar.gz
+            taiwan_stock_${{ env.ARCHIVE_YEAR }}.tar.gz.sha256
+
+      - name: Prune Archived Directories & Commit
+        run: |
+          git config --local user.name "datalake-bot"
+          git config --local user.email "bot@users.noreply.github.com"
+          
+          # 檢查壓縮檔是否存在，作為刪除保護屏障
+          if [ ! -f "taiwan_stock_${ARCHIVE_YEAR}.tar.gz" ]; then
+            echo "Archive file not found. Aborting prune to prevent accidental data loss."
+            exit 1
+          fi
+
+          find data/ -type d -name "${ARCHIVE_YEAR}" -exec git rm -rf {} + 2>/dev/null || true
+          git rm -rf "manifests/${ARCHIVE_YEAR}" 2>/dev/null || true
+          
+          if git diff --staged --quiet; then
+            echo "No directories pruned."
+          else
+            git commit -m "chore(archive): prune data for year ${ARCHIVE_YEAR} after release packaging"
+            git pull --rebase origin main || true
+            git push
+          fi
+

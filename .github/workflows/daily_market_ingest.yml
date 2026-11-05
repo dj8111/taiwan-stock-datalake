@@ -1,0 +1,69 @@
+name: Daily TWSE & TPEx Ingest
+
+on:
+  schedule:
+    # 台灣時間週一至週五 16:30 CST (UTC 08:30) - 收盤及三大法人初期數據
+    - cron: '30 8 * * 1-5'
+    # 台灣時間週一至週五 21:30 CST (UTC 13:30) - 晚間全量覆蓋 (含融資融券、借券餘額)
+    - cron: '30 13 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: '手動指定擷取日期 (格式 YYYYMMDD，留空則為當日)'
+        required: false
+        default: ''
+      sources:
+        description: '指定資料源 (twse, tpex 或 twse,tpex)'
+        required: false
+        default: 'twse,tpex'
+      limit:
+        description: '端點限制數量 (測試用，如填入 5)'
+        required: false
+        default: ''
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Market Data Ingestion
+        run: |
+          CMD="python scripts/fetch_twse_tpex.py --sources '${{ github.event.inputs.sources || 'twse,tpex' }}'"
+          if [ -n "${{ github.event.inputs.target_date }}" ]; then
+            CMD="$CMD --date ${{ github.event.inputs.target_date }}"
+          fi
+          if [ -n "${{ github.event.inputs.limit }}" ]; then
+            CMD="$CMD --limit ${{ github.event.inputs.limit }}"
+          fi
+          echo "Executing: $CMD"
+          eval $CMD
+
+      - name: Git Commit & Push Changes
+        run: |
+          git config --local user.name "datalake-bot"
+          git config --local user.email "bot@users.noreply.github.com"
+          git add data/twse/ data/tpex/ manifests/
+          if git diff --staged --quiet; then
+            echo "No changes to commit (market may be closed or data already up-to-date)."
+          else
+            git commit -m "chore(data): auto-update TWSE/TPEx datasets for $(date +'%Y-%m-%d')"
+            git pull --rebase origin main || true
+            git push
+          fi
+
