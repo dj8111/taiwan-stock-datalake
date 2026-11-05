@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taiwan Stock DataLake | 數據查詢工作台</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: 'Noto Sans TC', sans-serif; }
+    code, pre, .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f9ff', 500: '#0284c7', 600: '#0369a1', 700: '#075985' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col">
+
+  <!-- 頂部導航列 -->
+  <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50 px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-sky-500/20">
+        TW
+      </div>
+      <div>
+        <h1 class="text-lg font-bold text-white flex items-center gap-2">
+          Taiwan Stock DataLake
+          <span class="text-xs px-2 py-0.5 rounded-full bg-sky-950 text-sky-400 border border-sky-800">DuckDB Serverless</span>
+        </h1>
+        <p class="text-xs text-slate-400">TWSE / TPEx / TDCC 全市場開放數據湖查詢工作台</p>
+      </div>
+    </div>
+    <div class="flex items-center space-x-2">
+      <nav class="flex bg-slate-900 border border-slate-800 p-1 rounded-xl text-sm">
+        <button id="nav-catalog" onclick="switchTab('catalog')" class="px-4 py-1.5 rounded-lg font-medium transition bg-sky-600 text-white">資料目錄</button>
+        <button id="nav-viewer" onclick="switchTab('viewer')" class="px-4 py-1.5 rounded-lg font-medium transition text-slate-400 hover:text-white">端點檢視</button>
+        <button id="nav-sql" onclick="switchTab('sql')" class="px-4 py-1.5 rounded-lg font-medium transition text-slate-400 hover:text-white flex items-center gap-1.5">
+          <span>SQL 工作台</span>
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        </button>
+      </nav>
+      <a href="https://github.com/dj8111/taiwan-stock-datalake" target="_blank" class="text-xs px-3 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl border border-slate-700 transition flex items-center gap-1.5">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </header>
+
+  <!-- 主內容區 -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-6 space-y-6">
+
+    <!-- 標籤頁 1: 資料目錄 (Catalog) -->
+    <section id="tab-catalog" class="space-y-6">
+      <div class="bg-gradient-to-r from-slate-900 to-slate-950 p-6 rounded-2xl border border-slate-800 shadow-xl flex flex-col md:flex-row gap-4 justify-between items-center">
+        <div>
+          <h2 class="text-xl font-bold text-white mb-1">全市場 OpenAPI 資料目錄 (368 個端點)</h2>
+          <p class="text-sm text-slate-400">涵蓋臺灣證券交易所 (TWSE)、櫃買中心 (TPEx) 盤後行情、ESG、三大法人與集保股權分散表</p>
+        </div>
+        <div class="flex gap-2 w-full md:w-auto">
+          <input type="text" id="catalog-search" placeholder="搜尋端點名稱 (例: 職業安全衛生, 收盤, 融資...)" 
+            class="bg-slate-950 border border-slate-700 px-4 py-2.5 rounded-xl text-sm w-full md:w-80 focus:outline-none focus:border-sky-500 text-white placeholder-slate-500"
+            oninput="filterCatalog()">
+          <select id="catalog-source" onchange="filterCatalog()" class="bg-slate-950 border border-slate-700 px-3 py-2.5 rounded-xl text-sm focus:outline-none focus:border-sky-500 text-slate-300">
+            <option value="all">所有來源 (全部)</option>
+            <option value="twse">臺灣證交所 (TWSE)</option>
+            <option value="tpex">證券櫃買中心 (TPEx)</option>
+            <option value="tdcc">集保結算所 (TDCC)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 端點卡片網格 -->
+      <div id="catalog-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- 動態由 JavaScript 載入 -->
+        <div class="col-span-full py-16 text-center text-slate-500">
+          <svg class="w-8 h-8 animate-spin mx-auto mb-2 text-sky-500" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+          正在載入端點目錄...
+        </div>
+      </div>
+    </section>
+
+    <!-- 標籤頁 2: 端點檢視器 (Viewer) -->
+    <section id="tab-viewer" class="hidden space-y-6">
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <span id="viewer-source-badge" class="px-2 py-0.5 rounded text-xs font-semibold bg-sky-950 text-sky-400 border border-sky-800">TWSE</span>
+            <h2 id="viewer-title" class="text-xl font-bold text-white mt-1">上市公司企業ESG資訊揭露彙總資料-職業安全衛生</h2>
+            <p id="viewer-path" class="text-xs font-mono text-slate-400 mt-0.5">/opendata/t187ap46_L_21</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <input type="text" id="viewer-stock-filter" placeholder="篩選代碼 (例: 2330, 台泥)" 
+              class="bg-slate-900 border border-slate-700 px-3 py-2 rounded-xl text-sm focus:outline-none focus:border-sky-500 text-white"
+              oninput="filterViewerTable()">
+            <button onclick="exportCurrentCSV()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl text-sm font-medium transition flex items-center gap-1.5">
+              <span>匯出 CSV</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 數據表格容器 -->
+      <div class="bg-slate-950 rounded-2xl border border-slate-800 shadow-xl overflow-hidden">
+        <div class="p-4 border-b border-slate-800 flex justify-between items-center text-xs text-slate-400">
+          <span id="viewer-row-count">載入中...</span>
+          <span class="font-mono text-sky-400">Parquet Columnar Engine</span>
+        </div>
+        <div class="overflow-x-auto max-h-[600px] overflow-y-auto">
+          <table id="viewer-table" class="w-full text-left text-sm whitespace-nowrap">
+            <thead id="viewer-thead" class="sticky top-0 bg-slate-900/90 backdrop-blur border-b border-slate-800 text-slate-400 text-xs uppercase font-medium"></thead>
+            <tbody id="viewer-tbody" class="divide-y divide-slate-800 text-slate-300 font-mono text-xs"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 標籤頁 3: SQL 工作台 (DuckDB Workspace) -->
+    <section id="tab-sql" class="hidden space-y-6">
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 shadow-xl space-y-4">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+              <span>DuckDB SQL 查詢工作台</span>
+              <span class="text-xs font-normal px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800">零拷貝 Parquet 引擎</span>
+            </h2>
+            <p class="text-sm text-slate-400">直接對本地或雲端 Parquet 數據湖撰寫標準 SQL，支援跨日跨年 glob pattern 與欄位自動對齊</p>
+          </div>
+          <!-- 快捷查詢範本 -->
+          <div class="flex items-center gap-2">
+            <select id="sql-templates" onchange="applyTemplate()" class="bg-slate-900 border border-slate-700 text-xs px-3 py-2 rounded-xl text-slate-300 focus:outline-none focus:border-sky-500">
+              <option value="">-- 快速載入查詢範本 --</option>
+              <option value="esg">查詢上市職業安全衛生 (ESG 職災與死傷統計)</option>
+              <option value="tdcc">查詢集保千張大戶持股比例 (TDCC 400張/1000張分級)</option>
+              <option value="twse_price">查詢台股收盤行情 (依成交金額排序前 15 大個股)</option>
+            </select>
+            <button onclick="executeSQL()" class="px-5 py-2 bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white rounded-xl text-sm font-semibold shadow-lg shadow-sky-600/30 transition flex items-center gap-1.5">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              <span>執行 SQL</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- SQL 編輯器 -->
+        <div class="relative">
+          <textarea id="sql-input" rows="7" 
+            class="w-full bg-slate-900 text-sky-300 font-mono text-sm p-4 rounded-xl border border-slate-800 focus:outline-none focus:border-sky-500 resize-y"
+            placeholder="請輸入 DuckDB SQL 查詢語法..."></textarea>
+        </div>
+      </div>
+
+      <!-- SQL 查詢結果 -->
+      <div id="sql-result-container" class="bg-slate-950 rounded-2xl border border-slate-800 shadow-xl overflow-hidden hidden">
+        <div class="p-4 border-b border-slate-800 flex justify-between items-center text-xs text-slate-400">
+          <span id="sql-meta">查詢耗時: 0ms | 回傳 0 筆</span>
+          <button onclick="exportSQLResult()" class="text-sky-400 hover:text-sky-300 font-medium">匯出結果 (CSV)</button>
+        </div>
+        <div class="overflow-x-auto max-h-[500px] overflow-y-auto">
+          <table class="w-full text-left text-sm whitespace-nowrap">
+            <thead id="sql-thead" class="sticky top-0 bg-slate-900/90 backdrop-blur border-b border-slate-800 text-slate-400 text-xs uppercase font-medium"></thead>
+            <tbody id="sql-tbody" class="divide-y divide-slate-800 text-slate-300 font-mono text-xs"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="border-t border-slate-800 text-slate-500 text-xs py-6 px-6 text-center mt-auto">
+    Taiwan Stock DataLake Pipeline &copy; 2026. 開放資料採集自 TWSE / TPEx / TDCC 官方 OpenAPI.
+  </footer>
+
+  <!-- 前端互動腳本 -->
+  <script>
+    let rawCatalog = {};
+    let currentViewerData = [];
+    let currentSQLData = [];
+
+    // 切換頁籤
+    function switchTab(tabId) {
+      ['catalog', 'viewer', 'sql'].forEach(t => {
+        document.getElementById(`tab-${t}`).classList.add('hidden');
+        document.getElementById(`nav-${t}`).className = 'px-4 py-1.5 rounded-lg font-medium transition text-slate-400 hover:text-white';
+      });
+      document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+      document.getElementById(`nav-${tabId}`).className = 'px-4 py-1.5 rounded-lg font-medium transition bg-sky-600 text-white';
+    }
+
+    // 初始化載入目錄
+    async function loadCatalog() {
+      try {
+        const res = await fetch('/api/catalog');
+        rawCatalog = await res.json();
+        renderCatalogCards(rawCatalog);
+      } catch (err) {
+        console.error('載入目錄失敗:', err);
+        // 若純靜態開啟時的 fallback 資料
+        rawCatalog = {
+          "twse": {
+            "opendata_t187ap46_L_21": { "name": "上市公司企業ESG資訊揭露彙總資料-職業安全衛生", "path": "/opendata/t187ap46_L_21", "source": "twse", "source_name": "臺灣證交所" },
+            "exchangeReport_STOCK_DAY_ALL": { "name": "上市個股日收盤行情與成交資訊", "path": "/exchangeReport/STOCK_DAY_ALL", "source": "twse", "source_name": "臺灣證交所" },
+            "fund_T86": { "name": "三大法人買賣超日報 (T86)", "path": "/fund/T86", "source": "twse", "source_name": "臺灣證交所" },
+            "opendata_t187ap46_L_1": { "name": "上市公司企業ESG資訊揭露彙總資料-溫室氣體排放", "path": "/opendata/t187ap46_L_1", "source": "twse", "source_name": "臺灣證交所" }
+          },
+          "tpex": {
+            "t187ap46_O_21": { "name": "上櫃公司企業ESG資訊揭露彙總資料-職業安全衛生", "path": "/t187ap46_O_21", "source": "tpex", "source_name": "櫃買中心" },
+            "tpex_mainboard_daily_close_quotes": { "name": "上櫃個股日收盤行情", "path": "/tpex_mainboard_daily_close_quotes", "source": "tpex", "source_name": "櫃買中心" }
+          },
+          "tdcc": {
+            "share_distribution": { "name": "集保戶股權分散表 (每週千張大戶/散戶持股分級)", "path": "/smart/getOD/1-5", "source": "tdcc", "source_name": "集保結算所" }
+          }
+        };
+        renderCatalogCards(rawCatalog);
+      }
+    }
+
+    // 渲染目錄卡片
+    function renderCatalogCards(catalogData) {
+      const container = document.getElementById('catalog-list');
+      container.innerHTML = '';
+
+      let count = 0;
+      for (const [srcKey, items] of Object.entries(catalogData)) {
+        for (const [slug, item] of Object.entries(items)) {
+          count++;
+          const card = document.createElement('div');
+          card.className = 'catalog-card bg-slate-950 p-5 rounded-2xl border border-slate-800 hover:border-sky-500/50 hover:bg-slate-900/50 transition cursor-pointer flex flex-col justify-between group';
+          card.dataset.name = (item.name || '').toLowerCase();
+          card.dataset.slug = slug.toLowerCase();
+          card.dataset.source = srcKey;
+
+          const badgeColor = srcKey === 'twse' ? 'bg-sky-950 text-sky-400 border-sky-800' :
+                             srcKey === 'tpex' ? 'bg-indigo-950 text-indigo-400 border-indigo-800' : 'bg-amber-950 text-amber-400 border-amber-800';
+
+          card.innerHTML = `
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-xs px-2 py-0.5 rounded font-semibold border ${badgeColor}">${item.source_name || srcKey.toUpperCase()}</span>
+                <span class="text-xs font-mono text-slate-500">${slug}</span>
+              </div>
+              <h3 class="font-bold text-white group-hover:text-sky-400 transition text-sm mb-1">${item.name || slug}</h3>
+              <p class="text-xs font-mono text-slate-400 line-clamp-1">${item.path || ''}</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-900 flex justify-between items-center text-xs text-sky-400 font-medium">
+              <span>點擊載入數據 &rarr;</span>
+              <span class="text-slate-500 text-[11px]">Parquet</span>
+            </div>
+          `;
+          card.onclick = () => openViewer(srcKey, slug, item);
+          container.appendChild(card);
+        }
+      }
+    }
+
+    // 過濾目錄卡片
+    function filterCatalog() {
+      const q = document.getElementById('catalog-search').value.toLowerCase().trim();
+      const srcFilter = document.getElementById('catalog-source').value;
+      const cards = document.querySelectorAll('.catalog-card');
+
+      cards.forEach(card => {
+        const matchesQuery = !q || card.dataset.name.includes(q) || card.dataset.slug.includes(q);
+        const matchesSource = srcFilter === 'all' || card.dataset.source === srcFilter;
+        card.style.display = (matchesQuery && matchesSource) ? 'flex' : 'none';
+      });
+    }
+
+    // 開啟端點檢視器
+    async function openViewer(source, slug, item) {
+      document.getElementById('viewer-title').innerText = item.name || slug;
+      document.getElementById('viewer-path').innerText = `${source} / ${slug}`;
+      document.getElementById('viewer-source-badge').innerText = item.source_name || source.toUpperCase();
+      document.getElementById('viewer-row-count').innerText = '載入數據中...';
+      switchTab('viewer');
+
+      try {
+        const res = await fetch(`/api/data?source=${source}&endpoint=${slug}`);
+        const data = await res.json();
+        currentViewerData = data.rows || [];
+        renderTable(currentViewerData, 'viewer-thead', 'viewer-tbody', 'viewer-row-count');
+      } catch (err) {
+        console.warn('API 未連線，嘗試本地或模擬載入:', err);
+        // 模擬示範數據
+        currentViewerData = [
+          { "出表日期": "1151105", "報告年度": "114", "公司代號": "1101", "公司名稱": "台泥", "職業災害人數": "165", "職業災害比率": "1.20%", "火災死傷人數": "14" },
+          { "出表日期": "1151105", "報告年度": "114", "公司代號": "2330", "公司名稱": "台積電", "職業災害人數": "12", "職業災害比率": "0.02%", "火災死傷人數": "0" },
+          { "出表日期": "1151105", "報告年度": "114", "公司代號": "2317", "公司名稱": "鴻海", "職業災害人數": "28", "職業災害比率": "0.15%", "火災死傷人數": "1" }
+        ];
+        renderTable(currentViewerData, 'viewer-thead', 'viewer-tbody', 'viewer-row-count');
+      }
+    }
+
+    // 渲染通用表格
+    function renderTable(rows, theadId, tbodyId, countId) {
+      const thead = document.getElementById(theadId);
+      const tbody = document.getElementById(tbodyId);
+      thead.innerHTML = '';
+      tbody.innerHTML = '';
+
+      if (!rows || rows.length === 0) {
+        document.getElementById(countId).innerText = '無相符數據';
+        tbody.innerHTML = '<tr><td colspan="10" class="py-8 text-center text-slate-500">查無資料</td></tr>';
+        return;
+      }
+
+      document.getElementById(countId).innerText = `共 ${rows.length.toLocaleString()} 筆數據`;
+      const cols = Object.keys(rows[0]);
+
+      // 表頭
+      const trHead = document.createElement('tr');
+      cols.forEach(c => {
+        const th = document.createElement('th');
+        th.className = 'px-4 py-3 font-semibold text-slate-300';
+        th.innerText = c;
+        trHead.appendChild(th);
+      });
+      thead.appendChild(trHead);
+
+      // 表身 (限制最多渲染 200 筆避免卡頓)
+      rows.slice(0, 200).forEach(r => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-900/60 transition';
+        cols.forEach(c => {
+          const td = document.createElement('td');
+          td.className = 'px-4 py-2.5 text-slate-300';
+          td.innerText = r[c] !== null && r[c] !== undefined ? r[c] : '';
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+    }
+
+    // 篩選表格資料
+    function filterViewerTable() {
+      const q = document.getElementById('viewer-stock-filter').value.toLowerCase().trim();
+      if (!q) {
+        renderTable(currentViewerData, 'viewer-thead', 'viewer-tbody', 'viewer-row-count');
+        return;
+      }
+      const filtered = currentViewerData.filter(row => {
+        return Object.values(row).some(v => String(v).toLowerCase().includes(q));
+      });
+      renderTable(filtered, 'viewer-thead', 'viewer-tbody', 'viewer-row-count');
+    }
+
+    // 載入 SQL 範本
+    function applyTemplate() {
+      const t = document.getElementById('sql-templates').value;
+      const input = document.getElementById('sql-input');
+      if (t === 'esg') {
+        input.value = `-- 查詢上市公司職業安全衛生 (ESG 職災與死傷統計)\nSELECT \n    公司代號, 公司名稱, 職業災害人數及比率-人數 AS 職災人數, \n    "火災件數(件)" AS 火災件數, "火災死傷人數(人)" AS 死傷人數\nFROM read_parquet('data/twse/opendata_t187ap46_L_21/*/*.parquet', union_by_name=True)\nORDER BY CAST("火災死傷人數(人)" AS INT) DESC\nLIMIT 20;`;
+      } else if (t === 'tdcc') {
+        input.value = `-- 查詢集保戶股權分散表 (統計千張大戶持股比例)\nSELECT \n    資料日期, 證券代號, 持股分級, 人數, 股數, "占集保庫存數比例%" AS 持股比率\nFROM read_parquet('data/tdcc/share_distribution/*/*.parquet', union_by_name=True)\nWHERE 證券代號 = '2330'\nORDER BY 資料日期 DESC, CAST(持股分級 AS INT) DESC\nLIMIT 15;`;
+      } else if (t === 'twse_price') {
+        input.value = `-- 查詢上市公司收盤行情 (依成交量排序)\nSELECT \n    collected_date, Code, Name, ClosingPrice, TradeVolume\nFROM read_parquet('data/twse/exchangeReport_STOCK_DAY_ALL/*/*.parquet', union_by_name=True)\nORDER BY CAST(TradeVolume AS BIGINT) DESC\nLIMIT 20;`;
+      }
+    }
+
+    // 執行 SQL
+    async function executeSQL() {
+      const sql = document.getElementById('sql-input').value.trim();
+      if (!sql) return;
+
+      const container = document.getElementById('sql-result-container');
+      container.classList.remove('hidden');
+      document.getElementById('sql-meta').innerText = '執行中...';
+
+      const start = performance.now();
+      try {
+        const res = await fetch('/api/sql', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ sql })
+        });
+        const data = await res.json();
+        const cost = Math.round(performance.now() - start);
+
+        if (data.error) {
+          alert('SQL 執行錯誤: ' + data.error);
+          document.getElementById('sql-meta').innerText = `執行錯誤: ${data.error}`;
+          return;
+        }
+
+        currentSQLData = data.rows || [];
+        document.getElementById('sql-meta').innerText = `查詢耗時: ${data.duration_ms || cost}ms | 回傳 ${currentSQLData.length.toLocaleString()} 筆`;
+        renderTable(currentSQLData, 'sql-thead', 'sql-tbody', 'sql-meta');
+      } catch (err) {
+        console.error('SQL 執行失敗:', err);
+        alert('請確認本地後端 app.py 是否已啟動。');
+      }
+    }
+
+    // 匯出 CSV 函式
+    function downloadCSV(data, filename) {
+      if (!data || data.length === 0) return;
+      const keys = Object.keys(data[0]);
+      const csvContent = "\uFEFF" + [
+        keys.join(','),
+        ...data.map(r => keys.map(k => `"${String(r[k] || '').replace(/"/g, '""')}"`).join(','))
+      ].join('\r\n');
+
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+    }
+
+    function exportCurrentCSV() {
+      downloadCSV(currentViewerData, 'datalake_export.csv');
+    }
+
+    function exportSQLResult() {
+      downloadCSV(currentSQLData, 'sql_query_result.csv');
+    }
+
+    // 頁面載入時自動初始化
+    window.onload = () => {
+      loadCatalog();
+      applyTemplate();
+    };
+  </script>
+</body>
+</html>

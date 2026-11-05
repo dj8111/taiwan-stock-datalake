@@ -68,6 +68,9 @@ taiwan-stock-datalake/
 │   ├── fetch_tdcc.py                  # TDCC 爬蟲 (含編碼自適應與 MD5 去重)
 │   ├── archive_storage.py             # 打包、雜湊校驗與雲端上傳 (R2/S3)
 │   └── query_duckdb.py                # DuckDB 跨日查詢與 MCP 範例
+├── web/
+│   └── index.html                     # 數據湖查詢工作台前端 (Tailwind + Chart.js)
+├── app.py                             # 輕量本機 Web API 伺服器 (DuckDB 即時查詢)
 ├── requirements.txt
 ├── .gitignore
 └── README.md
@@ -82,13 +85,22 @@ taiwan-stock-datalake/
 pip install -r requirements.txt
 ```
 
-### 2. 測試 TWSE/TPEx 採集 (煙霧測試)
+### 2. 啟動視覺化網頁查詢工作台 (Web Console)
+```bash
+python app.py
+```
+啟動後於瀏覽器開啟 **`http://localhost:8000`** 即可：
+- 🔍 **端點目錄檢視**：瀏覽全市場 368 個 OpenAPI 端點中文名稱與規格。
+- 📊 **個股/數據互動檢視**：以表格檢視 Parquet 數據並一鍵匯出 CSV。
+- ⚡ **DuckDB SQL 工作台**：直接撰寫標準 SQL，零拷貝極速查詢 Parquet 分區數據。
+
+### 3. 測試 TWSE/TPEx 採集 (煙霧測試)
 ```bash
 # 限制僅擷取前 3 個端點進行快速驗證
 python scripts/fetch_twse_tpex.py --limit 3
 ```
 
-### 3. 測試 TDCC 集保戶股權分散表
+### 4. 測試 TDCC 集保戶股權分散表
 ```bash
 python scripts/fetch_tdcc.py
 # 再次執行測試冪等性（應輸出 [SKIP] No changes detected 且不覆蓋）
