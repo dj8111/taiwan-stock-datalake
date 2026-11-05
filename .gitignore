@@ -47,4 +47,6 @@ taiwan_stock_*.tar.gz.sha256
 # Local temporary dumps
 *.tmp
 *.log
+.cache/
+graphify-out/
 
