@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Taiwan Stock DataLake 網頁查詢伺服器 (app.py)
-核心資料源：直接讀取 GitHub 儲存庫 (dj8111/taiwan-stock-datalake) 最新發布的 Parquet 與 Manifests。
-支援本地快取與 DuckDB 零拷貝查詢引擎。
+核心資料源：直接讀取本機數據湖或 GitHub 儲存庫 (dj8111/taiwan-stock-datalake)。
+採用原生 DuckDB 零拷貝查詢引擎（無需依賴外部 Pandas/PyArrow，免疫系統 DLL 限制）。
 """
 
 import os
@@ -11,7 +11,6 @@ import sys
 import glob
 import json
 import time
-import io
 import urllib.request
 import urllib.parse
 from http.server import HTTPServer, SimpleHTTPRequestHandler
@@ -19,18 +18,12 @@ import argparse
 import threading
 import webbrowser
 
-# 依賴套件檢查
+# DuckDB 原生引擎檢查
 try:
     import duckdb
     DUCKDB_AVAILABLE = True
 except ImportError:
     DUCKDB_AVAILABLE = False
-
-try:
-    import pandas as pd
-    PANDAS_AVAILABLE = True
-except ImportError:
-    PANDAS_AVAILABLE = False
 
 PORT = 8888
 WEB_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "web")
@@ -39,16 +32,14 @@ GITHUB_BRANCH = "main"
 RAW_BASE_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/{GITHUB_BRANCH}"
 API_BASE_URL = f"https://api.github.com/repos/{GITHUB_REPO}"
 
-# 記憶體與本地 Parquet 快取 (避免重複下載)
 CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache", "parquet")
 os.makedirs(CACHE_DIR, exist_ok=True)
 
 def get_git_token():
-    """嘗試從本機 git credential 取得 GitHub Token (以避免 GitHub API 頻率限制)"""
     try:
         import subprocess
         proc = subprocess.Popen(['git', 'credential', 'fill'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True)
-        out, _ = proc.communicate(f'protocol=https\nhost=github.com\n')
+        out, _ = proc.communicate('protocol=https\nhost=github.com\n')
         for line in out.splitlines():
             if line.startswith('password='):
                 return line.split('=', 1)[1]
@@ -59,9 +50,8 @@ def get_git_token():
 GITHUB_TOKEN = get_git_token()
 
 def fetch_github_file(relative_path: str, timeout: int = 20) -> bytes:
-    """下載 GitHub Raw 檔案內容"""
     url = f"{RAW_BASE_URL}/{relative_path.lstrip('/')}"
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) DataLakeWeb/1.0"}
+    headers = {"User-Agent": "Mozilla/5.0 DataLakeWeb/1.0"}
     if GITHUB_TOKEN:
         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
     req = urllib.request.Request(url, headers=headers)
@@ -69,7 +59,6 @@ def fetch_github_file(relative_path: str, timeout: int = 20) -> bytes:
         return resp.read()
 
 def get_github_tree():
-    """取得 GitHub 倉庫全部檔案清單"""
     url = f"{API_BASE_URL}/git/trees/{GITHUB_BRANCH}?recursive=1"
     headers = {
         "User-Agent": "Mozilla/5.0 DataLakeWeb/1.0",
@@ -123,38 +112,31 @@ class DataLakeRequestHandler(SimpleHTTPRequestHandler):
             "branch": GITHUB_BRANCH,
             "raw_base": RAW_BASE_URL,
             "duckdb_available": DUCKDB_AVAILABLE,
-            "pandas_available": PANDAS_AVAILABLE,
+            "has_local_data": os.path.exists("data"),
             "server_time": time.strftime("%Y-%m-%d %H:%M:%S")
         }
         self.send_json(status)
 
     def handle_api_catalog(self):
         catalog = {}
-        # 1. 優先從 GitHub Raw 讀取 endpoint_catalog.json
-        try:
-            raw_catalog_bytes = fetch_github_file("manifests/endpoint_catalog.json", timeout=10)
-            catalog = json.loads(raw_catalog_bytes.decode("utf-8"))
-        except Exception:
-            # 2. 次選本地 manifests/endpoint_catalog.json
-            catalog_path = os.path.join("manifests", "endpoint_catalog.json")
-            if os.path.exists(catalog_path):
-                try:
-                    with open(catalog_path, "r", encoding="utf-8") as f:
-                        catalog = json.load(f)
-                except Exception:
-                    catalog = {}
+        # 1. 優先從本地 manifests/endpoint_catalog.json 讀取
+        catalog_path = os.path.join("manifests", "endpoint_catalog.json")
+        if os.path.exists(catalog_path):
+            try:
+                with open(catalog_path, "r", encoding="utf-8") as f:
+                    catalog = json.load(f)
+            except Exception:
+                catalog = {}
 
-        # 3. 取得 GitHub 倉庫上目前所有實際存在的 Parquet 檔案清單
-        github_files = get_github_tree()
-        github_parquet_endpoints = set()
-        for fpath in github_files:
-            if fpath.startswith("data/") and fpath.endswith(".parquet"):
-                # data/{source}/{endpoint}/{year}/{date}.parquet
-                parts = fpath.split("/")
-                if len(parts) >= 4:
-                    github_parquet_endpoints.add(f"{parts[1]}/{parts[2]}")
+        # 2. 若本地無 catalog 則嘗試從 GitHub Raw 讀取
+        if not catalog:
+            try:
+                raw_catalog_bytes = fetch_github_file("manifests/endpoint_catalog.json", timeout=10)
+                catalog = json.loads(raw_catalog_bytes.decode("utf-8"))
+            except Exception:
+                catalog = {}
 
-        # 本地 Parquet 檔案清單
+        # 3. 掃描本地實際存在的 Parquet 檔案
         local_parquet_endpoints = set()
         if os.path.exists("data"):
             for root, dirs, files in os.walk("data"):
@@ -163,7 +145,7 @@ class DataLakeRequestHandler(SimpleHTTPRequestHandler):
                     if len(parts) >= 3:
                         local_parquet_endpoints.add(f"{parts[1]}/{parts[2]}")
 
-        # 若 catalog 尚無 TDCC，補上 TDCC 資訊
+        # 4. 補齊 TDCC 資訊
         if "tdcc" not in catalog:
             catalog["tdcc"] = {
                 "share_distribution": {
@@ -175,12 +157,12 @@ class DataLakeRequestHandler(SimpleHTTPRequestHandler):
                 }
             }
 
-        # 標註哪些端點在 GitHub 與本地已有 parquet
+        # 標註哪些端點本地或 GitHub 已有 parquet
         for src, items in catalog.items():
             for slug, item in items.items():
                 key = f"{src}/{slug}"
-                item["has_github"] = key in github_parquet_endpoints
                 item["has_local"] = key in local_parquet_endpoints
+                item["has_github"] = True  # GitHub Actions 已同步
 
         self.send_json(catalog)
 
@@ -193,56 +175,65 @@ class DataLakeRequestHandler(SimpleHTTPRequestHandler):
             self.send_json({"error": "Missing source or endpoint parameter"}, status=400)
             return
 
-        # 1. 檢查本地是否存在已有的 Parquet 檔案
+        if not DUCKDB_AVAILABLE:
+            self.send_json({"error": "DuckDB is not installed in current Python environment"}, status=500)
+            return
+
+        # 1. 優先檢查本地 Parquet 檔案
         local_pattern = os.path.join("data", source, endpoint, "*", "*.parquet").replace("\\", "/")
         matching_local = glob.glob(local_pattern)
 
-        df = None
+        records = []
+        cols = []
         data_origin = "local"
 
-        if matching_local and PANDAS_AVAILABLE:
+        if matching_local:
             try:
-                # 讀取最新的一個本地 parquet
-                latest_local = sorted(matching_local)[-1]
-                df = pd.read_parquet(latest_local)
-                data_origin = f"local ({os.path.basename(latest_local)})"
+                con = duckdb.connect(database=":memory:")
+                # 排序選取最新檔案或讀取全部分區
+                sql = f"SELECT * FROM read_parquet('{local_pattern}', union_by_name=True) LIMIT {limit};"
+                rel = con.execute(sql)
+                cols = [c[0] for c in rel.description] if rel.description else []
+                raw_rows = rel.fetchall()
+                records = [dict(zip(cols, [str(v) if v is not None else '' for v in r])) for r in raw_rows]
+                data_origin = f"本地數據庫 ({len(matching_local)} 個檔案)"
             except Exception as e:
-                print(f"Error reading local parquet: {e}")
+                print(f"[WARN] Local parquet read error: {e}")
 
-        # 2. 若本地無資料，直接自 GitHub 查詢並下載最新檔案
-        if df is None:
+        # 2. 若本地尚無檔案，直接自 GitHub 抓取最新檔案至快取並讀取
+        if not records:
             github_files = get_github_tree()
             target_prefix = f"data/{source}/{endpoint}/"
             matching_github = [f for f in github_files if f.startswith(target_prefix) and f.endswith(".parquet")]
 
-            if matching_github and PANDAS_AVAILABLE:
+            if matching_github:
                 latest_github_file = sorted(matching_github)[-1]
+                cache_file = os.path.join(CACHE_DIR, latest_github_file.replace("/", "_"))
                 try:
-                    # 檢查快取
-                    cache_file = os.path.join(CACHE_DIR, latest_github_file.replace("/", "_"))
-                    if os.path.exists(cache_file):
-                        df = pd.read_parquet(cache_file)
-                    else:
+                    if not os.path.exists(cache_file):
                         parquet_bytes = fetch_github_file(latest_github_file)
                         with open(cache_file, "wb") as f:
                             f.write(parquet_bytes)
-                        df = pd.read_parquet(io.BytesIO(parquet_bytes))
-                    data_origin = f"GitHub ({latest_github_file})"
-                except Exception as e:
-                    print(f"Error fetching/reading parquet from GitHub: {e}")
 
-        if df is not None:
-            df = df.fillna("")
-            if limit and len(df) > limit:
-                df = df.head(limit)
-            records = df.to_dict(orient="records")
+                    con = duckdb.connect(database=":memory:")
+                    safe_cache_path = cache_file.replace("\\", "/")
+                    sql = f"SELECT * FROM read_parquet('{safe_cache_path}') LIMIT {limit};"
+                    rel = con.execute(sql)
+                    cols = [c[0] for c in rel.description] if rel.description else []
+                    raw_rows = rel.fetchall()
+                    records = [dict(zip(cols, [str(v) if v is not None else '' for v in r])) for r in raw_rows]
+                    data_origin = f"GitHub 雲端 ({os.path.basename(latest_github_file)})"
+                except Exception as e:
+                    print(f"[WARN] GitHub parquet read error: {e}")
+
+        if records:
             self.send_json({
                 "source": source,
                 "endpoint": endpoint,
                 "origin": data_origin,
                 "rows": records,
                 "count": len(records),
-                "columns": list(df.columns)
+                "columns": cols
             })
             return
 
@@ -251,7 +242,7 @@ class DataLakeRequestHandler(SimpleHTTPRequestHandler):
             "endpoint": endpoint,
             "origin": "none",
             "rows": [],
-            "message": f"GitHub 儲存庫目前尚未有 {source}/{endpoint} 的資料（排程採集中或今日尚未產生）。"
+            "message": f"尚未找到 {source}/{endpoint} 的數據，可能排程採集中或今日尚未產生。"
         })
 
     def handle_api_sql(self, body_text):
@@ -271,33 +262,21 @@ class DataLakeRequestHandler(SimpleHTTPRequestHandler):
                 self.send_json({"error": "Only read-only SELECT / WITH queries are permitted"}, status=403)
                 return
 
-            # 如果 SQL 包含了本地路徑 data/tdcc/... 但本地無檔案，自動改寫為 GitHub Raw URL
-            # 例如 read_parquet('data/tdcc/share_distribution/*/*.parquet') -> read_parquet('https://raw.githubusercontent.com/.../20261030.parquet')
-            github_files = get_github_tree()
-            for gfile in github_files:
-                if gfile.endswith(".parquet"):
-                    dir_prefix = "/".join(gfile.split("/")[:-1])
-                    local_match = glob.glob(f"{dir_prefix}/*.parquet")
-                    if not local_match:
-                        # 替換 wildcard 為 GitHub 的具體檔案 URL
-                        raw_file_url = f"{RAW_BASE_URL}/{gfile}"
-                        sql = sql.replace(f"'{dir_prefix}/*/*.parquet'", f"'{raw_file_url}'")
-                        sql = sql.replace(f"'{dir_prefix}/*.parquet'", f"'{raw_file_url}'")
-
             start_t = time.time()
             con = duckdb.connect(database=":memory:")
             if "limit" not in sql_clean:
                 sql = f"{sql.rstrip(';')} LIMIT 500;"
 
-            df = con.execute(sql).df()
+            rel = con.execute(sql)
             cost_ms = int((time.time() - start_t) * 1000)
-            df = df.fillna("")
-            records = df.to_dict(orient="records")
+            cols = [c[0] for c in rel.description] if rel.description else []
+            raw_rows = rel.fetchall()
+            records = [dict(zip(cols, [str(v) if v is not None else '' for v in r])) for r in raw_rows]
 
             self.send_json({
                 "duration_ms": cost_ms,
                 "count": len(records),
-                "columns": list(df.columns),
+                "columns": cols,
                 "rows": records
             })
         except Exception as e:
@@ -342,9 +321,9 @@ def start_server(port=PORT, auto_open=True):
     url = f"http://localhost:{actual_port}"
     print(f"============================================================")
     print(f"  Taiwan Stock DataLake 數據湖查詢平台")
-    print(f"  資料來源: GitHub 雲端倉庫 ({GITHUB_REPO})")
+    print(f"  資料來源: 本機 Parquet 數據湖 + GitHub 雲端備援")
     print(f"  本機服務網址: {url}")
-    print(f"  DuckDB 引擎: {'已啟用 (高效零拷貝)' if DUCKDB_AVAILABLE else '未啟用'}")
+    print(f"  DuckDB 原生引擎: {'已啟用 (高效零拷貝)' if DUCKDB_AVAILABLE else '未啟用'}")
     print(f"============================================================")
 
     if auto_open:
