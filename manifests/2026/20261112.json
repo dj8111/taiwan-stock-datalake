@@ -1,0 +1,18 @@
+{
+  "date": "20261112",
+  "executed_at": "2026-11-12T00:25:26.633181+08:00",
+  "results": {
+    "twse": {
+      "total_endpoints": 143,
+      "saved": 143,
+      "empty_or_skipped": 0,
+      "failed": 0
+    },
+    "tpex": {
+      "total_endpoints": 225,
+      "saved": 224,
+      "empty_or_skipped": 1,
+      "failed": 0
+    }
+  }
+}
