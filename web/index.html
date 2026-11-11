@@ -149,6 +149,8 @@
           <div class="flex items-center gap-2">
             <select id="sql-templates" onchange="applyTemplate()" class="bg-slate-900 border border-slate-700 text-xs px-3 py-2 rounded-xl text-slate-300 focus:outline-none focus:border-sky-500">
               <option value="">-- 快速載入查詢範本 --</option>
+              <option value="tdcc_issuance_recent">【方案B】查詢近期除權股票(無償配股)發放日程</option>
+              <option value="tdcc_issuance_all">【方案B】查詢集保所有新股交付日程 (增資/IPO/減資)</option>
               <option value="tdcc">查詢集保千張大戶持股比例 (TDCC 400張/1000張分級)</option>
               <option value="esg">查詢上市職業安全衛生 (ESG 職災與死傷統計)</option>
               <option value="twse_price">查詢台股收盤行情 (依成交量排序前 20 大個股)</option>
@@ -337,7 +339,11 @@
     function applyTemplate() {
       const t = document.getElementById('sql-templates').value;
       const input = document.getElementById('sql-input');
-      if (t === 'tdcc') {
+      if (t === 'tdcc_issuance_recent') {
+        input.value = `-- 【方案B】查詢近期除權股票 (無償配股) 劃撥發放日程一覽表\nSELECT \n    delivery_date AS 發放交付日期, \n    security_code AS 證券代號, \n    security_name AS 證券名稱, \n    distribution_reason AS 交付原因, \n    roc_delivery_date AS 民國日期\nFROM read_parquet('data/tdcc/share_issuance_schedule/*/*.parquet', union_by_name=True)\nWHERE distribution_reason = '無償配股'\nORDER BY delivery_date DESC, security_code ASC\nLIMIT 50;`;
+      } else if (t === 'tdcc_issuance_all') {
+        input.value = `-- 【方案B】查詢集保有價證券帳簿劃撥交付日程 (含現金增資認股、IPO與減資)\nSELECT \n    delivery_date AS 發放交付日期, \n    security_code AS 證券代號, \n    security_name AS 證券名稱, \n    distribution_reason AS 交付原因\nFROM read_parquet('data/tdcc/share_issuance_schedule/*/*.parquet', union_by_name=True)\nORDER BY delivery_date DESC, security_code ASC\nLIMIT 50;`;
+      } else if (t === 'tdcc') {
         input.value = `-- 查詢集保戶股權分散表 (統計千張大戶持股比例)\nSELECT \n    資料日期, 證券代號, 持股分級, 人數, 股數, "占集保庫存數比例%" AS 持股比率\nFROM read_parquet('data/tdcc/share_distribution/*/*.parquet', union_by_name=True)\nWHERE 證券代號 = '2330'\nORDER BY 資料日期 DESC, CAST(持股分級 AS INT) DESC\nLIMIT 15;`;
       } else if (t === 'esg') {
         input.value = `-- 查詢上市公司職業安全衛生 (ESG 職災與死傷統計)\nSELECT \n    公司代號, 公司名稱, "職業災害人數及比率-人數" AS 職災人數, \n    "火災件數(件)" AS 火災件數, "火災死傷人數(人)" AS 死傷人數\nFROM read_parquet('data/twse/opendata_t187ap46_L_21/*/*.parquet', union_by_name=True)\nORDER BY CAST("火災死傷人數(人)" AS INT) DESC\nLIMIT 20;`;

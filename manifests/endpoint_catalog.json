@@ -2578,5 +2578,21 @@
       "source_name": "證券櫃檯買賣中心",
       "description": "高殖利率指數歷史收盤指數"
     }
+  },
+  "tdcc": {
+    "share_distribution": {
+      "name": "集保戶股權分散表 (每週千張大戶/散戶分級)",
+      "path": "/opendata/getOD.ashx?id=1-5",
+      "source": "tdcc",
+      "source_name": "臺灣集中保管結算所",
+      "description": "每週統計各上市、上櫃與興櫃股票 1~15 級持股人數、股數與占集保庫存數比例%"
+    },
+    "share_issuance_schedule": {
+      "name": "有價證券帳簿劃撥配發/交付日期一覽表 (新股發放/除權配股交付)",
+      "path": "/portal/zh/smWeb/qryPS",
+      "source": "tdcc",
+      "source_name": "臺灣集中保管結算所",
+      "description": "集保結算所公佈之無償配股(除權股票股利)、有償認股(現金增資)、初次上市櫃(IPO)、減資/轉換等有價證券帳簿劃撥交付發放日程"
+    }
   }
 }

@@ -43,6 +43,10 @@ jobs:
           echo "Executing: $CMD"
           eval $CMD
 
+      - name: Run TDCC Share Issuance Schedule Ingestion (Option B)
+        run: |
+          python scripts/fetch_tdcc_issuance.py --days-back 60 --days-forward 30
+
       - name: Git Commit & Push (Idempotent)
         run: |
           git config --local user.name "datalake-bot"

@@ -147,15 +147,21 @@ class DataLakeRequestHandler(SimpleHTTPRequestHandler):
 
         # 4. 補齊 TDCC 資訊
         if "tdcc" not in catalog:
-            catalog["tdcc"] = {
-                "share_distribution": {
-                    "name": "集保戶股權分散表 (每週千張大戶/散戶分級)",
-                    "path": "/opendata/getOD.ashx?id=1-5",
-                    "source": "tdcc",
-                    "source_name": "臺灣集中保管結算所",
-                    "description": "統計各股票 1~15 級持股人數、股數與持股比率"
-                }
-            }
+            catalog["tdcc"] = {}
+        catalog["tdcc"]["share_distribution"] = {
+            "name": "集保戶股權分散表 (每週千張大戶/散戶分級)",
+            "path": "/opendata/getOD.ashx?id=1-5",
+            "source": "tdcc",
+            "source_name": "臺灣集中保管結算所",
+            "description": "統計各股票 1~15 級持股人數、股數與持股比率"
+        }
+        catalog["tdcc"]["share_issuance_schedule"] = {
+            "name": "有價證券帳簿劃撥交付日程 (新股發放/除權增資股票交付)",
+            "path": "/portal/zh/smWeb/qryPS",
+            "source": "tdcc",
+            "source_name": "臺灣集中保管結算所",
+            "description": "集保結算所公佈之無償配股(除權股票股利)、有償認股(現金增資)、初次上市櫃與減資等股票交付發放日程"
+        }
 
         # 標註哪些端點本地或 GitHub 已有 parquet
         for src, items in catalog.items():
@@ -180,14 +186,14 @@ class DataLakeRequestHandler(SimpleHTTPRequestHandler):
             return
 
         # 1. 優先檢查本地 Parquet 檔案
-        local_pattern = os.path.join("data", source, endpoint, "*", "*.parquet").replace("\\", "/")
-        matching_local = glob.glob(local_pattern)
+        local_files = glob.glob(os.path.join("data", source, endpoint, "**", "*.parquet"), recursive=True)
+        local_pattern = os.path.join("data", source, endpoint, "**", "*.parquet").replace("\\", "/")
 
         records = []
         cols = []
         data_origin = "local"
 
-        if matching_local:
+        if local_files:
             try:
                 con = duckdb.connect(database=":memory:")
                 # 排序選取最新檔案或讀取全部分區
@@ -196,7 +202,7 @@ class DataLakeRequestHandler(SimpleHTTPRequestHandler):
                 cols = [c[0] for c in rel.description] if rel.description else []
                 raw_rows = rel.fetchall()
                 records = [dict(zip(cols, [str(v) if v is not None else '' for v in r])) for r in raw_rows]
-                data_origin = f"本地數據庫 ({len(matching_local)} 個檔案)"
+                data_origin = f"本地數據庫 ({len(local_files)} 個檔案)"
             except Exception as e:
                 print(f"[WARN] Local parquet read error: {e}")
 
